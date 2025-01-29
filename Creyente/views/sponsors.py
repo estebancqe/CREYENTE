@@ -10,7 +10,7 @@ from Creyente.estilo.colors import TextColor
 def sponsors() -> rx.Component:
     return rx.vstack(
         title("Ubicación"),
-       
+      
           rx.vstack(
             link_button(
                 "Ibarra",
@@ -25,7 +25,7 @@ def sponsors() -> rx.Component:
                 const.UBI_LATA
             ),
           ),
-       
+      
         width="100%",
         align_items="start",
         spacing=Spacing.DEFAULT.value

@@ -1,10 +1,10 @@
 import reflex as rx
 import Creyente.constants as const
 from Creyente.components.newsletter import newsletter 
-# from Creyente.routes import Route
+from Creyente.routes import Route
 from Creyente.components.link_button import link_button
 from Creyente.components.title import title
-from Creyente.estilo.estilo import Spacing
+from Creyente.estilo.estilo import Color, Spacing
 # from Creyente.state.PageState import PageState
 
 
@@ -36,23 +36,23 @@ def index_links() -> rx.Component:
             const.LINKEDLINK
             ),
         
-        # title("Cátalogo De Materiales"),
-        #  link_button(
-        #     "Catalago de Materiales",
-        #     "Consulta los diferentes colores que puedes elegir",
-        #     "/icons/book-solid.svg",
-        #     Route.COURSES.value,
-        #     False,
-        #     Color.PURPLE.value
-        # ),
-        # link_button(
-        #     "Cotizacion",
-        #     "cotizacion tu Productos",
-        #     "/icons/book-solid.svg",
-        #     Route.COTIZAR.value,
-        #     False,
-        #     Color.PRO.value
-        # ),
+        title("Cátalogo De Materiales"),
+        link_button(
+            "Catalago de Materiales",
+            "Consulta los diferentes colores que puedes elegir",
+            "/icons/book-solid.svg",
+            Route.COURSES.value,
+            False,
+            Color.PURPLE.value
+        ),
+        link_button(
+            "Cotizacion",
+            "cotizacion tu Productos",
+            "/icons/book-solid.svg",
+            Route.COTIZAR.value,
+            False,
+            Color.PRO.value
+        ),
         title("Cátalogo"),
         link_button(
             "Maderas Personalisadas",

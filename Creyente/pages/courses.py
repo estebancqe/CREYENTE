@@ -8,7 +8,7 @@ from Creyente.views.header import header
 from Creyente.views.courses_links import courses_links
 from Creyente.views.sponsors import sponsors
 from Creyente.estilo.estilo import Size
-from Creyente.state.PageState import PageState
+# from Creyente.state.PageState import PageState
 
 
 @rx.page(

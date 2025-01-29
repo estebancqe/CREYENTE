@@ -2,8 +2,8 @@ import reflex as rx
 import Creyente.constants as const
 import Creyente.estilo.estilo as styles
 from Creyente.pages.index import index
-# from Creyente.pages.courses import courses
-# from Creyente.pages.cotizar import cotizar
+from Creyente.pages.courses import courses
+from Creyente.pages.cotizar import cotizar
 # from Creyente.api.api import repo, live, featured,api_Muebles,api_Modelos
 
 app = rx.App(

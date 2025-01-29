@@ -59,7 +59,7 @@ def courses_links() -> rx.Component:
             "dimension 2.12 x 2.44 m",
             "/material/Tivoli.jpg"
         ),
-         link_material(
+        link_material(
             "Toquilla",
             "dimension 2.12 x 2.44 m",
             "/material/Toquilla.jpg"
