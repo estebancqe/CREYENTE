@@ -1,4 +1,4 @@
-cd Creyente
+cd Documents/Creyente
 python -m venv .venvcreyente
 source .venvcreyente/bin/activate
 pip install --upgrade pip
