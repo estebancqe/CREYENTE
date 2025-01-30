@@ -32,15 +32,13 @@ def cotizar_links(HERRAJES=[], MUEBLES=[]) -> rx.Component:
             False,
             Color.SECONDARY.value
         ),
-     
+    
 
     
-       
         # title("Muestra del contenido del archivo prueba"),
         # doc_prueba(),
         
         
-         
         title("Nuestros Modelos de Muebles"),
         tabs_muebles(),  
 
@@ -53,7 +51,7 @@ def cotizar_links(HERRAJES=[], MUEBLES=[]) -> rx.Component:
         #             rx.foreach(
         #                 PageState.mueble_info,
         #                   informacion_muebles,
-                          
+        
         #             ),
         #             flex_direction=["column", "row"],
         #             spacing=Spacing.DEFAULT.value
@@ -81,7 +79,7 @@ def cotizar_links(HERRAJES=[], MUEBLES=[]) -> rx.Component:
         #     )
         # ),
         
-       
-      
+    
+    
     width="100%",
     )

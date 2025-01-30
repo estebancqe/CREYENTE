@@ -2,7 +2,7 @@ from Creyente.api.Supacotizar import BaseAPI
 from Creyente.model.MODELOS import MODELOS
 
 class ModelosAPI(BaseAPI):
-     def Modelos(self) -> list[MODELOS]:
+    def Modelos(self) -> list[MODELOS]:
         
         response = self.client.table("MODELOS").select("*").order("modelo").limit(50).execute()
 

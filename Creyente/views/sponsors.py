@@ -49,7 +49,6 @@ def sponsors() -> rx.Component:
 #                flex_direction=["column", "row"]
 
 #           ),
-       
 #         width="100%",
 #         align_items="start",
 #         spacing=Spacing.DEFAULT.value

@@ -20,4 +20,3 @@ class MueblesAPI(BaseAPI):
                 )
 
         return mueble_data
-     

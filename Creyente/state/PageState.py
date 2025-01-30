@@ -16,7 +16,7 @@ class PageState(rx.State):
     featured_info: list[Featured] = []
     mueble_info: list[MUEBLES] = []
     modelo_info: list[MODELOS] = []
-         
+    
     
     async def initialize_state(self):
         await asyncio.gather(

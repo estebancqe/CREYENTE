@@ -20,7 +20,7 @@ def tabs_muebles() -> rx.Component:
                     ),
                     size="2",
                     width="100%",
-                   
+                
                 ),
                 type="always",
                 scrollbars="horizontal",
@@ -33,7 +33,7 @@ def tabs_muebles() -> rx.Component:
                 width="100%",
                 
             ),
-           
+        
             
             rx.foreach(
                 MuebleState.muebles,

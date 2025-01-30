@@ -5,7 +5,7 @@ from Creyente.routes import Route
 from Creyente.components.link_button import link_button
 from Creyente.components.title import title
 from Creyente.estilo.estilo import Color, Spacing
-# from Creyente.state.PageState import PageState
+from Creyente.state.PageState import PageState
 
 
 def index_links() -> rx.Component:
@@ -93,9 +93,9 @@ def index_links() -> rx.Component:
             f"mailto:{const.EMAIL}"
         ),
             
-        # title("Newsletter"),
-        # newsletter(),   
+        title("Newsletter"),
+        newsletter(),   
         width="100%",
         spacing=Spacing.DEFAULT.value,
-        # on_mount=PageState.featured_links
+        on_mount=PageState.featured_links
     )   

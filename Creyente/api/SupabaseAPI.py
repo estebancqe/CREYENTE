@@ -1,6 +1,6 @@
 import os
 import dotenv
-from Creyente import create_client, Client
+from supabase import create_client, Client
 from Creyente.model.Featured import Featured
 
 

@@ -1,3 +1,5 @@
+cd Creyente
+python -m venv .venv
 source .venvcreyente/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt

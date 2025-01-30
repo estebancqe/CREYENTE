@@ -6,7 +6,7 @@ from Creyente.estilo.colors import Color, TextColor
 from Creyente.components.link_icon import link_icon
 from Creyente.components.info_text import info_text
 from Creyente.components.link_button import link_button
-# from Creyente.state.PageState import PageState
+from Creyente.state.PageState import PageState
 
 
 def header(details=True) -> rx.Component:
@@ -95,7 +95,7 @@ def header(details=True) -> rx.Component:
         width="100%",
         spacing=Spacing.BIG.value,                     #espacion entre las 2 secciones
         align_items="start", #alinear todo al inicio
-        # on_mount=PageState.check_live
+        on_mount=PageState.check_live
         
     )
     
