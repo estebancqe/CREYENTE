@@ -5,3 +5,5 @@
 .venvcreyente/
 __pycache__/
 assets/external/
+.DS_Store
+
