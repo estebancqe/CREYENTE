@@ -4,6 +4,6 @@ config = rx.Config(
     app_name="Creyente",
     cors_allowed_origins=[
         "http://localhost:3000",
-        "https://creyentes.vercel.app"
+        "https://creyente.vercel.app"
     ]
 )

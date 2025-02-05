@@ -9,6 +9,7 @@ def navbar() -> rx.Component:
     return rx.hstack(
         rx.link(
             rx.box(
+                rx.text("asegurarnos    ", as_="span", color=Color.PRIMARY.value),
                 rx.text("Crey", as_="span", color=Color.PRIMARY.value),
                 rx.text("ente", as_="span", color=Color.SECONDARY.value),
                 style=styles.navbar_title_style
