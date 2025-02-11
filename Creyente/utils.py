@@ -7,14 +7,14 @@ def lang() -> rx.Component:
     return rx.script("document.documentElement.lang='es'")
 
 # URL de la imagen de vista previa
-preview = "https://moure.dev/preview.jpg"
+preview = "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto//logo_creyente_mami%20(1).jpeg"
 
 # Metadatos comunes para la web
 _meta = [
     {"name": "og:type", "content": "website"},
     {"name": "og:image", "content": preview},
     {"name": "twitter:card", "content": "summary_large_image"},
-    {"name": "twitter:site", "content": "@mouredev"}
+    {"name": "twitter:site", "content": "@Creyente"}
 ]
 
 # Metadatos para la página de inicio

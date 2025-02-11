@@ -1,4 +1,4 @@
-from Creyente.api.Supacotizar import BaseAPI
+from Creyente.api.SubabaseApi_client import BaseAPI
 from Creyente.model.MUEBLES import MUEBLES
 
 class MueblesAPI(BaseAPI):

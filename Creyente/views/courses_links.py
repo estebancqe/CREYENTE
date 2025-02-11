@@ -1,23 +1,11 @@
 import reflex as rx
-import Creyente.constants as const
-from Creyente.routes import Route
-from Creyente.components.link_button import link_button
 from Creyente.components.link_material import link_material
 from Creyente.components.title import title
-from Creyente.components.newsletter import newsletter
-from Creyente.estilo.estilo import Color, Spacing, Size
+from Creyente.estilo.estilo import Spacing, Size
 
 
 def courses_links() -> rx.Component:
     return rx.vstack(
-        link_button(
-            "Pagina Principal",
-            "nuestros catalogos y contactos",
-            "/icons/book-solid.svg",
-            Route.INDEX.value,
-            False,
-            Color.SECONDARY.value
-        ),
         title("Melamina en Diferentes Colores"),
         link_material(
             "Agave",
@@ -64,8 +52,9 @@ def courses_links() -> rx.Component:
             "dimension 2.12 x 2.44 m",
             "/material/Toquilla.jpg"
         ),
-        
+        align="center",
+        justify="center",
         width="100%",
         spacing=Spacing.DEFAULT.value,
-        padding_top=Size.BIG.value
+        padding_top=Size.ZERO.value
     )

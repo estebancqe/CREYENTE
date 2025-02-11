@@ -2,16 +2,13 @@ import reflex as rx
 import datetime
 import Creyente.constants as const
 from Creyente.estilo.estilo import Size, Spacing
-from Creyente.estilo.colors import Color, TextColor
-from Creyente.components.ant_components import float_button
-
+from Creyente.estilo.colors import Color
 
 def footer() -> rx.Component:
     return rx.vstack(
         rx.image(
-            src="/logocrebla.png",
-            height=Size.VERY_BIG.value,     #alto del logo
-            width=Size.VERY_BIG.value,      #ancho del logo
+            src="/logocrebla.png",    #alto del logo
+            width=Size.SUPER_VERY_BIG.value,   #ancho del logo
             alt="logotipo de la marca",  #esto es para personas ividentes
         ),
         rx.link(
@@ -20,41 +17,35 @@ def footer() -> rx.Component:
                 rx.text(
                     "trabajo con excelencia",
                     as_="span",
-                    color=Color.PRIMARY.value
+                    color=Color.BACKGROUND.value,
+                    size=Spacing.DEFAULT.value,
                 ),
                 " Creyente.",
-                padding_top=Size.DEFAULT.value
+                padding_top=Size.DEFAULT.value,
+                color=Color.BACKGROUND.value,
+                size=Spacing.DEFAULT.value,
             ),
             href=const.CATALOGO,
             is_external=True,
-            font_size=Size.MEDIUM.value
+            font_size=Size.DEFAULT.value
         ),
         rx.link(
             rx.hstack(
-                # rx.image(
-                #     src="/AvatarC.png",
-                #     height=Size.LARGE.value,
-                #     width=Size.LARGE.value,
-                #     alt="Avatar"
-                # ),
                 rx.text(
                     "Innovación en Madera: Inspirando Espacios, Creando Historias para ti.",
-                    font_size=Size.MEDIUM.value,
+                    font_size=Size.DEFAULT.value,
                     margin_top=Size.ZERO.value
                 ),
+                color=Color.BACKGROUND.value,
             ),
             href=const.CATALOGO,
             is_external=True
         ),
-        
-        # float_button(
-        #    icon=rx.image(src="/AvatarC.png"),
-        #    href=const.CATALOGO
-        # ),
+        width="100%",
         align="center",
-        margin_bottom=Size.BIG.value,
-        padding_bottom=Size.VERY_BIG.value,
+        margin_bottom=Size.DEFAULT.value,
+        padding_bottom=Size.DEFAULT.value,
         padding_x=Size.BIG.value,
         spacing=Spacing.ZERO.value,
-        color=TextColor.FOOTER.value
+        bg=Color.CONTENT.value,
     )

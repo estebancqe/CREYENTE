@@ -4,6 +4,9 @@ import Creyente.estilo.estilo as styles
 from Creyente.pages.index import index
 from Creyente.pages.courses import courses
 from Creyente.pages.cotizar import cotizar
+from Creyente.pages.historia import historia
+from Creyente.pages.mision import mision
+from Creyente.pages.trabajos import trabajos
 from Creyente.api.api import repo, live, featured,api_Muebles,api_Modelos
 
 app = rx.App(

@@ -16,25 +16,6 @@ from Creyente.Presupuesto.infrmacion_modelos import infrmacion_modelos
 
 def cotizar_links(HERRAJES=[], MUEBLES=[]) -> rx.Component:
     return rx.vstack(
-        link_button(
-            "Pagina Principal",
-            "nuestros catalogos y contactos",
-            "/icons/book-solid.svg",
-            Route.INDEX.value,
-            False,
-            Color.SECONDARY.value
-        ),
-        link_button(
-            "Catálogo de Materiales",
-            "Explora el catálogo completo de materiales disponibles",
-            "/icons/book-solid.svg",
-            Route.COURSES.value,
-            False,
-            Color.SECONDARY.value
-        ),
-    
-
-    
         # title("Muestra del contenido del archivo prueba"),
         # doc_prueba(),
         

@@ -4,7 +4,7 @@ from Creyente.model.Featured import Featured
 from Creyente.model.MUEBLES import MUEBLES
 from Creyente.model.MODELOS import MODELOS
 
-from .SupabaseAPI import SupabaseAPI
+from .featured_api import SupabaseAPI
 from  Creyente.api.Muebles_api import MueblesAPI
 from  Creyente.api.Modelos_api import ModelosAPI
 

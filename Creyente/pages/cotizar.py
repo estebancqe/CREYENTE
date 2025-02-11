@@ -25,7 +25,7 @@ def cotizar() -> rx.Component:
         navbar(),
         rx.center(
             rx.vstack(
-                header(False),
+                # header(False),
                 cotizar_links(
                     PageState.mueble_info,
                     PageState.modelo_info,

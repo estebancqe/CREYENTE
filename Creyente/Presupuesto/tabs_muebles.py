@@ -15,7 +15,7 @@ def tabs_muebles() -> rx.Component:
                         lambda mueble, index: rx.tabs.trigger(
                             mueble.mueble,  # Usamos el nombre del mueble como título de la pestaña
                             value=f"tab{index}",
-                            color="white"
+                            color="black"
                         )
                     ),
                     size="2",
@@ -25,7 +25,7 @@ def tabs_muebles() -> rx.Component:
                 type="always",
                 scrollbars="horizontal",
                 style=rx.Style({
-                    "background_color": rx.color("white", 7),
+                    "background_color": rx.color("black", 7),
                     "border_color": rx.color("blue", 1),
                     
                 }),
@@ -43,13 +43,13 @@ def tabs_muebles() -> rx.Component:
                             rx.hstack(
                                 rx.box(
                                     rx.vstack(
-                                        rx.heading(mueble.mueble, color="white",),
+                                        rx.heading(mueble.mueble, color="black",),
                                         rx.image(
                                             src=mueble.url_image,
                                             height="auto",
                                             width="250px",
                                         ),
-                                        rx.text(mueble.descripcion, color="white"),
+                                        rx.text(mueble.descripcion, color="black"),
                                         width="200px",
                                         padding_top=Size.BIG.value,
                                         aling="center"    

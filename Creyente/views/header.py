@@ -12,92 +12,63 @@ from Creyente.state.PageState import PageState
 def header(details=True) -> rx.Component:
     return rx.vstack(
         rx.hstack(
-            
-            rx.avatar(
-                    name="Julio. César Quiña",
-                    size=Spacing.MEDIUM_BIG.value,
-                    src="/creyenteLogo.jpg",
-                    radius="full",
-                    color=TextColor.BODY.value,
-                    bg=Color.CONTENT.value,
-                    padding="2px",
-                    border=f"4px solid {Color.PRIMARY.value}"
-                ),
+            rx.image(
+                src="/CREYENTE.png",
+                width="300px",
+                aling="center",
+            ),
             rx.vstack(
                 rx.heading(
                     "CREYENTE",
-                    size=Spacing.BIG.value
+                    size=Spacing.VERY_BIG.value,
+                    color=Color.CONTENT.value,
                 ),
                 rx.text(
-                    "J. César. & Hijos",
+                    "Diseño de muebles y mas",
                     margin_top=Size.ZERO.value,
-                    color=Color.PRIMARY.value
+                    color=Color.BLACK.value,
+                    size=Spacing.BIG.value,
                 ),
-                rx.hstack(
-                    link_icon(
-                        "/icons/instagram.svg",
-                        const.INSTAGRAM,
-                        "email@email.com"
-                    ),
-                    link_icon(
-                        "/icons/facebook.svg",
-                        const.FACEBOOK,
-                        "facebook"
-                    ),
-                    link_icon(
-                        "/icons/book-solid.svg",
-                        const.CATALOGO,
-                        "catalogo"
-                    ),
-                    link_icon(
-                        "/icons/whatsapp.svg",
-                        const.WHATSAPP,
-                        "whatssap"
-                    ),
-                    spacing=Spacing.LARGE.value,
-                    padding_top=Size.SMALL.value,
-                ),
-                spacing=Spacing.ZERO.value,
-                align_items="start",
             ),
-            align="end",
-            spacing=Spacing.DEFAULT.value,
-        ),      
-        rx.cond(  
-            details,
-            rx.vstack(
-                rx.flex(
-                    info_text(
-                        f"{experience()}+",
-                        "años de experiencia"
-                    ),
-                    rx.spacer(),#crea un espacio ficticio entre texto
-                    info_text(
-                        "ateción","al detalle"
-                    ),
-                    rx.spacer(), 
-                    info_text(
-                        "trabajo","certificado"
-                    ),
-                    width="100%",
-                ),
-                rx.text(
-                    f"""
-                    Bienvenido a nuestro sitio especializado en trabajos en madera y melamina. Desde muebles a medida hasta soluciones de almacenamiento, fusionamos la tradición con la innovación para crear piezas únicas que realzan cualquier espacio. ¡Explore nuestro portafolio y dé vida a sus proyectos con nosotros!""",
-                    font_size=Size.DEFAULT.value,
-                    color=TextColor.BODY.value
-                ),
-                width="100%",  
-                spacing=Spacing.BIG.value,
+            # rx.hstack(
+            #     link_icon(
+            #         "/icons/instagram.svg",
+            #         const.INSTAGRAM,
+            #         "email@email.com"
+            #     ),
+            #     link_icon(
+            #         "/icons/facebook.svg",
+            #         const.FACEBOOK,
+            #         "facebook"
+            #     ),
+            #     link_icon(
+            #         "/icons/book-solid.svg",
+            #         const.CATALOGO,
+            #         "catalogo"
+            #     ),
+            #     link_icon(
+            #         "/icons/whatsapp.svg",
+            #         const.WHATSAPP,
+            #         "whatssap"
+            #     ),
+            #     spacing=Spacing.BIG.value,
                 
-            )            
-        ),  
-        width="100%",
-        spacing=Spacing.BIG.value,                     #espacion entre las 2 secciones
-        align_items="start", #alinear todo al inicio
-        on_mount=PageState.check_live
+            # ),
+
+            flex_direction=["column", "row"],
+            align="center",
+            justify="between",
+            spacing=Spacing.VERY_BIG.value,
+            width="100%",
+        ),
+        rx.image(
+            src="https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/fotos%20trabajos%20web/imagenes%20completas%20full%20definicion/cogador_horizontal.JPG",
+            height="auto"
+        ),
         
-    )
+        spacing=Spacing.BIG.value,
+        width=["100%","auto"],
+    ),
     
 def experience() -> int:
     return datetime.date.today().year - 2020

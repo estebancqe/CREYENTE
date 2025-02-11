@@ -24,32 +24,11 @@ def sponsors() -> rx.Component:
                 "/icons/location.svg",
                 const.UBI_LATA
             ),
+            width="100%",
+            align="center",
+            justify="center",
           ),
-      
-        width="100%",
-        align_items="start",
-        spacing=Spacing.DEFAULT.value
+          width="100%",
+          align_items="center",
+          spacing=Spacing.DEFAULT.value
     )
-    
-# def sponsors() -> rx.Component:
-#     return rx.vstack(
-#         title("Ubicacion"),
-#           rx.flex(
-#                link_sponsor(
-#                     "/AvatarC.png",
-#                     const.CARPINTERIA, 
-#                     "Avatar"        
-#                ),
-#                link_sponsor(
-#                     "/logocrebla.png",
-#                     const.CARPINTERIA, 
-#                     "simbolo de carpinteria"
-#                ),
-#                spacing=Spacing.BIG.value,
-#                flex_direction=["column", "row"]
-
-#           ),
-#         width="100%",
-#         align_items="start",
-#         spacing=Spacing.DEFAULT.value
-#     )

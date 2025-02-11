@@ -33,7 +33,7 @@ def acordion_modelos(id_muebles) -> rx.Component:
                                 ),
                                 rx.text(
                                     modelo['descripcion'],
-                                    color="white",
+                                    color="black",
                                     width="100%",
                                 ),
                             ),
@@ -51,7 +51,7 @@ def acordion_modelos(id_muebles) -> rx.Component:
             on_value_change=ModelosState.change_acor,
             variant="ghost",
             on_mount=ModelosState.load_modelos,
-            color_scheme="indigo"
+            # color_scheme="blue"
         ),
         width="100%",
     )

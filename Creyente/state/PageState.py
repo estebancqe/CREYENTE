@@ -1,7 +1,7 @@
 import reflex as rx
 import asyncio
 from typing import Union, List
-from Creyente.api.SupabaseAPI import SupabaseAPI
+from Creyente.api.featured_api import SupabaseAPI
 from Creyente.api.api import live, featured, api_Muebles,api_Modelos
 from Creyente.model.Featured import Featured
 from Creyente.model.MUEBLES import MUEBLES
