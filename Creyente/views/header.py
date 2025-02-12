@@ -29,6 +29,7 @@ def header(details=True) -> rx.Component:
                     color=Color.BLACK.value,
                     size=Spacing.BIG.value,
                 ),
+                padding=Size.SMALL.value
             ),
             # rx.hstack(
             #     link_icon(

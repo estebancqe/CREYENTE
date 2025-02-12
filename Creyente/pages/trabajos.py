@@ -4,7 +4,7 @@ import Creyente.estilo.estilo as styles
 from Creyente.components.navbar import navbar
 from Creyente.components.footer import footer
 from Creyente.views.header import header
-from Creyente.views.index_links import index_links
+from Creyente.views.carrusel import carrusel
 from Creyente.views.sponsors import sponsors
 from Creyente.estilo.estilo import Size, Spacing
 from Creyente.routes import Route
@@ -23,7 +23,8 @@ def trabajos() -> rx.Component:
         rx.center(
             rx.vstack(
                 # header(),
-                rx.text("TRABAJOS", size=Spacing.VERY_BIG.value),
+                rx.text("TRABAJOS", size=Spacing.VERY_BIG.value,color="silver"),
+                # carrusel(),
                 sponsors(),
                 max_width=styles.MAX_WIDTH,
                 width="100%",

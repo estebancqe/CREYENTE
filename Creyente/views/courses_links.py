@@ -7,7 +7,8 @@ from Creyente.estilo.estilo import Spacing, Size
 def courses_links() -> rx.Component:
     return rx.vstack(
         title("Melamina en Diferentes Colores"),
-        link_material(
+        rx.grid(
+            link_material(
             "Agave",
             "dimension 2.12 x 2.44 m",
             "/material/Agave.jpg"
@@ -52,9 +53,20 @@ def courses_links() -> rx.Component:
             "dimension 2.12 x 2.44 m",
             "/material/Toquilla.jpg"
         ),
+        flex_direction=["column", "row"],
+        columns=rx.breakpoints(
+            initial="1",
+            sm="3", 
+            # lg="3"
+        ),
         align="center",
         justify="center",
-        width="100%",
+        width="auto",
         spacing=Spacing.DEFAULT.value,
         padding_top=Size.ZERO.value
+        ),
+        width="100%",
+        align="center",
+        justify="center",
+        spacing=Spacing.DEFAULT.value,
     )

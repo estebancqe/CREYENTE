@@ -18,7 +18,7 @@ def index_links() -> rx.Component:
                 "Facebook",
                 "Clases de dibujo y mas.",
                 "/icons/facebook.svg",
-                const.FACEBOOK
+                const.FACEBOOK,
             ),
             link_button(
                 "Instagram", 
@@ -61,7 +61,7 @@ def index_links() -> rx.Component:
                 "Consulta los diferentes colores que puedes elegir",
                 "/icons/book-solid.svg",
                 Route.COURSES.value,
-                False,
+                True,
                 Color.PURPLE.value
             ),
             link_button(
@@ -72,7 +72,7 @@ def index_links() -> rx.Component:
                 False,
                 Color.PRO.value
             ),
-            spacing="2",
+            spacing="2",    
             width="100%",
             flex_direction=["column", "column", "row"],
             align="center",

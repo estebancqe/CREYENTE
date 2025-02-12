@@ -24,13 +24,14 @@ def index() -> rx.Component:
         rx.center(
             rx.vstack(
                 header(),
-                index_links(   
+                rx.box(
+                    index_links(),
+                    sponsors(),
+                    padding=Size.BIG.value
                 ),
-                sponsors(),
                 max_width=styles.MAX_WIDTH,
                 width="100%",
                 margin_y=Size.BIG.value,
-                padding=Size.BIG.value
             )
         ),
         footer()

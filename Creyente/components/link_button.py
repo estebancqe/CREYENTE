@@ -10,6 +10,8 @@ def link_button(title: str,
                 highlight_color=None,
                 animated=False) -> rx.Component:
 
+
+    animation_class = styles.BOUNCEIN_ANIMATION if animated else ""
     return rx.link(
         rx.box(
             rx.hstack(
@@ -36,6 +38,7 @@ def link_button(title: str,
                     padding_y=Size.SMALL.value,
                     padding_right=Size.SMALL.value
                 ),
+                width=("100%"),
             ),
             # Estilos del botón
             height=["100%", "auto"],
@@ -46,8 +49,11 @@ def link_button(title: str,
             white_space="normal",
             text_align="center",
             cursor="pointer",
+            #borde adicional
             border=f"{'2px' if highlight_color != None else '0px'} solid {highlight_color}",
-            class_name=styles.BOUNCEIN_ANIMATION if animated else None,
+            #clase de animacion
+            class_name=animation_class,
+            # Hover effect
             _hover={
                 "background_color": Color.SECONDARY.value
             }
@@ -55,4 +61,5 @@ def link_button(title: str,
         href=url,
         is_external=is_external,
         width=["100%", "100%", "48%"],
+        text_decoration="none",
     )

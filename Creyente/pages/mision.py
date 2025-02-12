@@ -23,7 +23,7 @@ def mision() -> rx.Component:
         rx.center(
             rx.vstack(
                 # header(),
-                rx.text("MISION", size=Spacing.VERY_BIG.value),
+                rx.text("MISION", size=Spacing.VERY_BIG.value,color="silver"),
                 sponsors(),
                 max_width=styles.MAX_WIDTH,
                 width="100%",

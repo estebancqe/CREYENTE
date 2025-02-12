@@ -1,13 +1,13 @@
 import reflex as rx
 import Creyente.estilo.estilo as styles
-from Creyente.estilo.estilo import Size, Spacing, Color, TextColor
+from Creyente.estilo.estilo import Size, Spacing, Color
 
 
 def link_material(title: str,
                 body: str,
                 image: str,
                 highlight_color=None,
-                animated=True) -> rx.Component:
+                animated=False) -> rx.Component:
 
     return rx.button(
         rx.hstack(
