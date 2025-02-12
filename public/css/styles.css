@@ -9,3 +9,20 @@ body {
 .blink {
     animation: blinker 1.5s linear infinite;
 }
+
+.animate__animated {
+    opacity: 0;
+}
+
+.animate__animated.animate__fadeIn {
+    opacity: 1;
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+}
