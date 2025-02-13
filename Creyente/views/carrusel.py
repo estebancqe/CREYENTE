@@ -1,57 +1,74 @@
 import reflex as rx
-from reflex.components.component import NoSSRComponent
+from Creyente.estilo.colors import Color
 
-# Definición de los componentes
-class Swiper(NoSSRComponent):
-    """Swiper component."""
-    library = "swiper@10.3.1"  # Especificamos una versión estable
-    tag = "Swiper"
-    is_default = True
-    
-    # Modificamos las dependencias
-    lib_dependencies: list[str] = ["swiper@10.3.1"]
-    
-    slides_per_view: rx.Var[int]
-    space_between: rx.Var[int]
-    navigation: rx.Var[bool]
-    pagination: rx.Var[dict]
-
-    def add_imports(self):
-        return {
-            "": ["swiper/css", "swiper/css/navigation", "swiper/css/pagination"]
-        }
-
-class SwiperSlide(NoSSRComponent):
-    """SwiperSlide component."""
-    library = "swiper"
-    tag = "SwiperSlide"
-    is_default = True
-
-# Funciones de componentes
-def create_carousel(images: list[str]) -> rx.Component:
-    return rx.box(
-        Swiper.create(
-            *[SwiperSlide.create(rx.image(src=img, width="100%")) for img in images],
-            slides_per_view=3,
-            space_between=20,
-            navigation=True,
-            pagination={"clickable": True}
-        )
-    )
-
-def carrusel():
-    """Página principal"""
-    image_sets = [
-        ["/CREYENTE_circular.png"] * 3,
-        ["/CREYENTE_circular.png"] * 3,
-        ["/CREYENTE_circular.png"] * 3,
-        ["/CREYENTE_circular.png"] * 3,
-        ["/CREYENTE_circular.png"] * 3,
+class bannerState(rx.ComponentState):
+    contador: int
+    imagenes: list[str] = [
+        "/CREYENTE_circular.png",
+        "/CREYENTE.png", 
+        "/logo_creyente_mami.jpeg"
     ]
-    
-    return rx.vstack(
-        *[create_carousel(images) for images in image_sets],
-        spacing="4"
-    )
 
-# Configuración de la app
+    def avanzar(self):
+        self.contador = (self.contador+1) % len(self.imagenes)
+
+    def retroceder(self):
+        self.contador = (self.contador-1) % len(self.imagenes)
+
+    @rx.var
+    def bannerstr(self) -> str:
+        return self.imagenes[self.contador]
+
+    @classmethod
+    def get_component(cls, titulo: str = "", **props) -> rx.Component:
+        return rx.vstack(
+            rx.heading(
+                titulo,
+                color=Color.CONTENT.value
+            ) 
+        if titulo else None,
+            rx.hstack(
+                rx.icon_button(
+                    "arrow_left", 
+                    on_click=cls.avanzar
+                ),
+                rx.image(
+                    src=cls.bannerstr, 
+                    width="100px", 
+                    height="100px"
+                ),
+                rx.icon_button(
+                    "arrow-right", 
+                    on_click=cls.retroceder
+                ),
+            )
+        )
+
+img = bannerState.create
+
+def carrusel() -> rx.Component:
+    return rx.vstack(
+        # First carousel
+        img(titulo="Carrusel 1"),
+        rx.divider(),  # Adds a line between carousels
+        # Second carousel
+        img(
+            titulo="Carrusel 2",
+            imagenes=[
+                "/CREYENTE_circular.png",
+                "/CREYENTE.png", 
+                "/logo_creyente_mami.jpeg"
+            ]
+        ),
+        rx.divider(),
+        # Third carousel
+        img(
+            titulo="Carrusel 3",
+            imagenes=[
+                "/CREYENTE_circular.png",
+                "/CREYENTE.png", 
+                "/logo_creyente_mami.jpeg"
+            ]
+        ),
+        spacing="4",  # Adds vertical spacing between all items in vstack
+    )

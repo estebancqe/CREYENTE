@@ -24,7 +24,7 @@ def trabajos() -> rx.Component:
             rx.vstack(
                 # header(),
                 rx.text("TRABAJOS", size=Spacing.VERY_BIG.value,color="silver"),
-                # carrusel(),
+                carrusel(),
                 sponsors(),
                 max_width=styles.MAX_WIDTH,
                 width="100%",
