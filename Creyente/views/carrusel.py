@@ -1,12 +1,13 @@
 import reflex as rx
 from Creyente.estilo.colors import Color
+from Creyente.estilo.estilo import Size
 
 class bannerState(rx.ComponentState):
     contador: int
     imagenes: list[str] = [
-        "/CREYENTE_circular.png",
-        "/CREYENTE.png", 
-        "/logo_creyente_mami.jpeg"
+        "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/cafetera_horizontal_trabajo.JPG",
+        "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/cafetera_vertical_cerrado_trabajo.JPG", 
+        "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/cafetera_vertical_abierto_trabajo.JPG"
     ]
 
     def avanzar(self):
@@ -28,20 +29,31 @@ class bannerState(rx.ComponentState):
             ) 
         if titulo else None,
             rx.hstack(
-                rx.icon_button(
-                    "arrow_left", 
-                    on_click=cls.avanzar
+                rx.image(
+                    "/icons/angulo-izquierdo.png", 
+                    on_click=cls.avanzar,
+                    sizes=Size.DEFAULT.value,
                 ),
                 rx.image(
                     src=cls.bannerstr, 
-                    width="100px", 
-                    height="100px"
+                    width="auto", 
+                    height="500px",
+                    
                 ),
-                rx.icon_button(
-                    "arrow-right", 
-                    on_click=cls.retroceder
+                rx.image(
+                    "/icons/angulo-derecho.png", 
+                    on_click=cls.retroceder,
+                    sizes=Size.DEFAULT.value,
                 ),
-            )
+                width="100%",
+                align="center",      # Alineación vertical
+                justify="center",    # Alineación horizontal
+                spacing="4", 
+            ),
+            width="100%",
+            justify="center",
+            alinght="center",
+            spacing="4"  
         )
 
 img = bannerState.create
@@ -49,7 +61,7 @@ img = bannerState.create
 def carrusel() -> rx.Component:
     return rx.vstack(
         # First carousel
-        img(titulo="Carrusel 1"),
+        img(titulo="Cafete"),
         rx.divider(),  # Adds a line between carousels
         # Second carousel
         img(
@@ -70,5 +82,6 @@ def carrusel() -> rx.Component:
                 "/logo_creyente_mami.jpeg"
             ]
         ),
+        width="100%",
         spacing="4",  # Adds vertical spacing between all items in vstack
     )
