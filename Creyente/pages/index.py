@@ -26,7 +26,7 @@ def index() -> rx.Component:
                 header(),
                 rx.box(
                     index_links(),
-                    sponsors(),
+                    # sponsors(),
                     padding=Size.BIG.value
                 ),
                 max_width=styles.MAX_WIDTH,

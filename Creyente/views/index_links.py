@@ -62,7 +62,7 @@ def index_links() -> rx.Component:
                 "/icons/book-solid.svg",
                 Route.COURSES.value,
                 True,
-                Color.PURPLE.value
+                Color.GRIS.value
             ),
             link_button(
                 "Cotizacion",
@@ -70,7 +70,7 @@ def index_links() -> rx.Component:
                 "/icons/book-solid.svg",
                 Route.COTIZAR.value,
                 False,
-                Color.PRO.value
+                Color.GRIS.value
             ),
             spacing="2",    
             width="100%",

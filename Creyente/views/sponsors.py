@@ -4,13 +4,20 @@ from Creyente.estilo.estilo import Size,Spacing
 from Creyente.components.title import title
 from Creyente.components.link_sponsor import link_sponsor
 from Creyente.components.link_button import link_button
-from Creyente.estilo.colors import TextColor
+from Creyente.estilo.colors import Color
 
 
 def sponsors() -> rx.Component:
     return rx.vstack(
-        title("Ubicación"),
-      
+        title("Donde nos puesdes encontrar ?"),
+        rx.heading(
+            "Latacunga",
+            color=Color.CONTENT.value
+        ),
+        rx.heading(
+            "Ibarra",
+            color=Color.CONTENT.value
+        ),
           rx.vstack(
             link_button(
                 "Ibarra",

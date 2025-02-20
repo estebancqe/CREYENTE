@@ -8,8 +8,8 @@ class Color(Enum):
     CONTENT = "#D2B48C" # cafe claro
     SECOND_TITTLE= "#CCB089" # cafe claro ocn mas contraste tendecia mas oscura
     BLACK="#0C151D"
-    PURPLE = "#9146ff"
-    PRO = "#FF5500"
+    GRIS = "#C2C2C2" #gris antrasita
+    ESMERALDA = "#088F8F"  #verde esmeralda
     prueba="#0C151D"
 
 
