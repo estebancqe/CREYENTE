@@ -128,13 +128,13 @@ def crear_carrusel(id: int, titulo: str) -> rx.Component:
 
 def ejemplo_carrusel():
     return rx.vstack(
-        crear_carrusel(1, "Mueble para tu Cafetera"),
-        crear_carrusel(2, "Colgador para tu entrada de casa"),
-        crear_carrusel(3, "Escritorio para toda ocacion"),
-        crear_carrusel(4, "Muebles para tu cocina"),
-        crear_carrusel(5, "Espacios para dar homenaje"),
-        crear_carrusel(6, "Mueble para tu sala"),
-        crear_carrusel(7, "Muebles para tu ropa"),
+        crear_carrusel(1, "Mueble Cafetera"),
+        crear_carrusel(2, "Enumero"),
+        crear_carrusel(3, "Escritorios"),
+        crear_carrusel(4, "Muebles Cocina"),
+        crear_carrusel(5, "Estudio"),
+        crear_carrusel(6, "Muebles Sala"),
+        crear_carrusel(7, "Mueble Dormitorio"),
         width="100%",
         spacing="2",
         align="center",
