@@ -8,7 +8,7 @@ from Creyente.estilo.estilo import Size, Color, TextColor
 def navbar() -> rx.Component:
     return rx.flex(
         # Navegación izquierda
-        rx.flex(
+        rx.hstack(
             rx.hstack(
                 link_navbar(
                     "Inicio",
@@ -37,20 +37,21 @@ def navbar() -> rx.Component:
             spacing="4",
             color=Color.BACKGROUND.value,
             style=styles.navbar_title_style,
-            flex_direction=["column", "row"],
+            # flex_direction=["column", "row"],
             
         ),
         # Logo/Título centrado
         rx.hstack(
             rx.link(
-                rx.text("CREY", as_="span", color=TextColor.HEADER.value),
-                rx.text("ENTE", as_="span", color=TextColor.HEADER.value),
-                spacing="1",
-                style=styles.navbar_title_style,
+                rx.image(
+                    src="/CREYENTE.png",
+                    height=["auto","50px"],
+                    widht="auto",
+                ),
                 href=Route.INDEX.value 
             ),
         ),
-        spacing="3",
+        spacing="4",
         width=["100%", "auto"],
         position="sticky", #PARA QUE SE QUEDE ESTATICO 
         bg=Color.CONTENT.value,

@@ -78,7 +78,7 @@ BASE_STYLE = {
 navbar_title_style = dict(
     font_family=Font.LOGO.value,
     font_weight=FontWeight.MEDIUM.value,
-    font_size=Size.MEDIUM_LARGE.value,
+    font_size=[Size.DEFAULT.value,Size.MEDIUM_LARGE.value],
 )
 
 title_style = dict(

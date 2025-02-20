@@ -12,11 +12,11 @@ from Creyente.state.PageState import PageState
 def header(details=True) -> rx.Component:
     return rx.vstack(
         rx.hstack(
-            rx.image(
-                src="/CREYENTE.png",
-                width="300px",
-                aling="center",
-            ),
+            # rx.image(
+            #     src="/CREYENTE.png",
+            #     width="300px",
+            #     aling="center",
+            # ),
             rx.vstack(
                 rx.heading(
                     "CREYENTE",
@@ -31,34 +31,10 @@ def header(details=True) -> rx.Component:
                 ),
                 padding=Size.SMALL.value
             ),
-            # rx.hstack(
-            #     link_icon(
-            #         "/icons/instagram.svg",
-            #         const.INSTAGRAM,
-            #         "email@email.com"
-            #     ),
-            #     link_icon(
-            #         "/icons/facebook.svg",
-            #         const.FACEBOOK,
-            #         "facebook"
-            #     ),
-            #     link_icon(
-            #         "/icons/book-solid.svg",
-            #         const.CATALOGO,
-            #         "catalogo"
-            #     ),
-            #     link_icon(
-            #         "/icons/whatsapp.svg",
-            #         const.WHATSAPP,
-            #         "whatssap"
-            #     ),
-            #     spacing=Spacing.BIG.value,
-                
-            # ),
 
             flex_direction=["column", "row"],
             align="center",
-            justify="between",
+            justify="center",
             spacing=Spacing.VERY_BIG.value,
             width="100%",
         ),
