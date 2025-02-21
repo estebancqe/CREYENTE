@@ -8,7 +8,7 @@ from Creyente.components.link_icon import link_icon
 from Creyente.components.title import title
 
 def footer() -> rx.Component:
-    return rx.container(
+    return rx.box(
         rx.hstack(
             # Logo + Slogan
             rx.vstack(
@@ -52,9 +52,9 @@ def footer() -> rx.Component:
                             f"2020 al -{datetime.date.today().year} ",
                             justify="center",
                             align="center",
-                            spacing=Spacing.ZERO.value,
+                            spacing=Spacing.ZERO.value,  # Ajustado
                         ),
-                        padding_top=Size.ZERO.value,
+                        padding_top=Size.SMALL.value,  # Ajustado
                         color=Color.BACKGROUND.value,
                     ),
                     href=const.CATALOGO,
@@ -72,20 +72,18 @@ def footer() -> rx.Component:
                     link_icon("/icons/book-solid.svg", const.CATALOGO, "catalogo"),
                     link_icon("/icons/whatsapp.svg", const.WHATSAPP, "whatsapp"),
                     spacing=rx.breakpoints(
-                        initial=Spacing.DEFAULT.value,
+                        initial=Spacing.LARGE.value,  # Ajustado
                         sm=Spacing.LARGE.value
                     ),
-                    padding_top=Size.SMALL.value,
+                    padding_top=Size.ZERO.value,  # Ajustado
                     display=rx.breakpoints(
                         initial="flex",
                         sm="flex"
                     ),
-                    # flex_direction=rx.breakpoints(
-                    #     initial="column",
-                    #     sm="row"
-                    # ),
                 ),
-                spacing=Spacing.VERY_SMALL.value,
+                flex_direction=["column", "row"],
+                spacing=Spacing.LARGE.value,  # Ajustado
+                spacing_y=Spacing.DEFAULT.value,  # Ajustado
                 align_items="center"
             ),
             
@@ -125,24 +123,18 @@ def footer() -> rx.Component:
             ),
 
             width="100%",
-            justify="between",  # Changed from "space-between" to "between"
+            justify="between",
             align_items="center",
             padding=rx.breakpoints(
                 initial="1em",
-                sm="2em",
-                lg="3em"
             ),
+            padding_y=Size.MEDIUM_BIG.value,
             bg=Color.CONTENT.value,
-            # flex_direction=rx.breakpoints(
-            #     # initial="column",
-            #     sm="row"
-            # ),
             gap=rx.breakpoints(
                 initial="2em",
                 sm="0"
-            )
+            ),
         ),
-        max_width="100%",
         width="100%",
         margin="0 auto",
     )

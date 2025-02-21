@@ -6,7 +6,7 @@ def link_icon(image: str, url: str, alt: str) -> rx.Component:
         rx.image(
             src=image,
             width="auto",
-            height=[Size.SMALL.value,Size.MEDIUM_BIG.value],
+            height=[Size.DEFAULT.value,Size.MEDIUM_BIG.value],
             alt=alt
         ),
         href=url,
