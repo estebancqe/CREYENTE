@@ -10,10 +10,12 @@ from Creyente.components.title import title
 def footer() -> rx.Component:
     return rx.container(
         rx.hstack(
+            # Logo + Slogan
             rx.vstack(
                 rx.image(
                     src="/logocrebla.png",
-                    width=rx.breakpoints(
+                    width="100%",
+                    height=rx.breakpoints(
                         initial=Size.BIG.value,
                         sm=Size.VERY_BIG.value,
                         lg=Size.SUPER_VERY_BIG.value
@@ -29,65 +31,65 @@ def footer() -> rx.Component:
                     margin_top=Size.ZERO.value,
                     color=Color.BACKGROUND.value,
                 ),
-                spacing_y="0"
+                spacing=Spacing.ZERO.value,
+                align_items="start"
             ),
             
-            rx.link(
-                rx.hstack(
-                    rx.vstack(
-                        rx.text(
-                            "Trabajando del ",
-                            as_="span", 
-                            color=Color.BACKGROUND.value,
-                            size=rx.breakpoints(
-                                initial=Spacing.SMALL.value,
-                                sm=Spacing.DEFAULT.value
+            # Texto de los años + Redes sociales
+            rx.vstack(
+                rx.link(
+                    rx.hstack(
+                        rx.vstack(
+                            rx.text(
+                                "Trabajando del ",
+                                as_="span", 
+                                color=Color.BACKGROUND.value,
+                                font_size=rx.breakpoints(
+                                    initial=Size.DEFAULT.value,
+                                    sm=Size.DEFAULT.value
+                                ),
                             ),
+                            f"2020 al -{datetime.date.today().year} ",
+                            justify="center",
+                            align="center",
+                            spacing=Spacing.ZERO.value,
                         ),
-                        f"2020 al -{datetime.date.today().year} ",
-                        justify="center",
+                        padding_top=Size.ZERO.value,
+                        color=Color.BACKGROUND.value,
                     ),
-                    padding_top=Size.DEFAULT.value,
-                    color=Color.BACKGROUND.value,
+                    href=const.CATALOGO,
+                    is_external=True,
+                    font_size=rx.breakpoints(
+                        initial=Size.SMALL.value,
+                        sm=Size.DEFAULT.value
+                    ),
                 ),
-                href=const.CATALOGO,
-                is_external=True,
-                font_size=rx.breakpoints(
-                    initial=Size.SMALL.value,
-                    sm=Size.DEFAULT.value
+                
+                # Social media icons section
+                rx.flex(
+                    link_icon("/icons/instagram.svg", const.INSTAGRAM, "email@email.com"),
+                    link_icon("/icons/facebook.svg", const.FACEBOOK, "facebook"),
+                    link_icon("/icons/book-solid.svg", const.CATALOGO, "catalogo"),
+                    link_icon("/icons/whatsapp.svg", const.WHATSAPP, "whatsapp"),
+                    spacing=rx.breakpoints(
+                        initial=Spacing.DEFAULT.value,
+                        sm=Spacing.LARGE.value
+                    ),
+                    padding_top=Size.SMALL.value,
+                    display=rx.breakpoints(
+                        initial="flex",
+                        sm="flex"
+                    ),
+                    # flex_direction=rx.breakpoints(
+                    #     initial="column",
+                    #     sm="row"
+                    # ),
                 ),
-                spacing=Spacing.BIG.value
+                spacing=Spacing.ZERO.value,
+                align_items="center"
             ),
             
-            rx.flex(
-                link_icon(
-                    "/icons/instagram.svg",
-                    const.INSTAGRAM,
-                    "email@email.com"
-                ),
-                link_icon(
-                    "/icons/facebook.svg", 
-                    const.FACEBOOK,
-                    "facebook"
-                ),
-                link_icon(
-                    "/icons/book-solid.svg",
-                    const.CATALOGO,
-                    "catalogo"
-                ),
-                link_icon(
-                    "/icons/whatsapp.svg",
-                    const.WHATSAPP, 
-                    "whatssap"
-                ),
-                spacing=rx.breakpoints(
-                    initial=Spacing.DEFAULT.value,
-                    sm=Spacing.LARGE.value
-                ),
-                padding_top=Size.SMALL.value,
-                flex_direction=["column", "row", "row"],
-            ),
-            
+            # Location
             rx.link(
                 rx.vstack(
                     rx.heading(
@@ -115,27 +117,32 @@ def footer() -> rx.Component:
                         margin_top=Size.ZERO.value
                     ),
                     color=Color.BACKGROUND.value,
+                    spacing=Spacing.ZERO.value,
+                    align_items="end"
                 ),
                 href=Route.TRABAJOS.value,
                 is_external=True
             ),
+
             width="100%",
-            flex_direction=["row", "row", "row"],
-            align="center",
-            justify="between",  # Cambiado de "space-between" a "between"
-            gap=rx.breakpoints(
-                initial="2",
-                sm="4",
-                lg="6"
-            ),
+            justify="between",  # Changed from "space-between" to "between"
+            align_items="center",
             padding=rx.breakpoints(
                 initial="1em",
                 sm="2em",
                 lg="3em"
             ),
             bg=Color.CONTENT.value,
+            # flex_direction=rx.breakpoints(
+            #     # initial="column",
+            #     sm="row"
+            # ),
+            gap=rx.breakpoints(
+                initial="2em",
+                sm="0"
+            )
         ),
-        max_width="1200px",
+        max_width="100%",
         width="100%",
         margin="0 auto",
     )
