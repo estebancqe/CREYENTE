@@ -14,7 +14,7 @@ def footer() -> rx.Component:
             rx.vstack(
                 rx.image(
                     src="/logocrebla.png",
-                    width="100%",
+                    width="auto",
                     height=rx.breakpoints(
                         initial=Size.BIG.value,
                         sm=Size.VERY_BIG.value,
@@ -85,7 +85,7 @@ def footer() -> rx.Component:
                     #     sm="row"
                     # ),
                 ),
-                spacing=Spacing.ZERO.value,
+                spacing=Spacing.VERY_SMALL.value,
                 align_items="center"
             ),
             
