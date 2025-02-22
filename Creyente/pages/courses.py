@@ -34,3 +34,4 @@ def courses() -> rx.Component:
         ),
         footer()
     )
+

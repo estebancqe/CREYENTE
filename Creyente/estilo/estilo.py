@@ -6,7 +6,7 @@ from .fonts import Font, FontWeight
 # Constants
 MAX_WIDTH = "100%"
 # En estilo.py
-FADEIN_ANIMATION = "animate__animated animate__fadeIn animate__duration-2s"
+FADEIN_ANIMATION = "animate__animated animate__jello animate__duration-2s"
 BOUNCEIN_ANIMATION = "animate__animated animate__rubberBand animate__duration-3s"
 
 # Sizes

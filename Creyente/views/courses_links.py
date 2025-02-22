@@ -63,7 +63,8 @@ def courses_links() -> rx.Component:
         justify="center",
         width="auto",
         spacing=Spacing.DEFAULT.value,
-        padding_top=Size.ZERO.value
+        padding_top=Size.ZERO.value,
+        class_name="animate__animated animate__bounce animate__delay-1s"
         ),
         width="100%",
         align="center",

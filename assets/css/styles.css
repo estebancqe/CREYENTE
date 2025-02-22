@@ -14,15 +14,27 @@ body {
     opacity: 0;
 }
 
+/* La animación fadeIn muestra los elementos */
 .animate__animated.animate__fadeIn {
     opacity: 1;
 }
 
-.animate-on-scroll {
-    opacity: 0;
-    transition: opacity 0.5s;
+/* La animación swing también debe hacer visibles los elementos */
+.animate__animated.animate__bounce {
+    opacity: 1;
 }
 
+/* Ocultar elementos por defecto hasta que sean visibles */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Mostrar elementos cuando sean visibles */
 .animate-on-scroll.visible {
     opacity: 1;
+    transform: none;
+    visibility: visible;
 }

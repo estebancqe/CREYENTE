@@ -7,7 +7,7 @@ def link_material(title: str,
                 body: str,
                 image: str,
                 highlight_color=None,
-                animated=False) -> rx.Component:
+                ) -> rx.Component:
 
     return rx.button(
         rx.hstack(
@@ -40,8 +40,8 @@ def link_material(title: str,
             justify="center",#que este en el centro las imagenes
             width="100%"
         ),
-        bg=Color.BACKGROUND.value,
+        bg=Color.CONTENT.value,
         border=f"{'2px' if highlight_color != None else '0px'} solid {highlight_color}",
-        class_name=styles.BOUNCEIN_ANIMATION if animated else None,
+        class_name="animate__animated animate__bounce animate__delay-1s",
         
     )

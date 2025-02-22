@@ -3,7 +3,7 @@ from Creyente.estilo.estilo import Size
 from Creyente.estilo.colors import Color
 
 class CarruselState(rx.State):
-    contadores: dict[int, int] = {1: 0, 2: 0, 3: 0, 4: 0,5: 0,6: 0,7: 0}
+    contadores: dict[int, int] = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0}
     
     todas_imagenes: dict[int, list[str]] = {
         1: [
@@ -15,7 +15,6 @@ class CarruselState(rx.State):
             "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/cogador_horizontal_trabajo.JPG", 
             "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/colgador_vertical_cerrado_trabajo.JPG",
             "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/colgador_vertical_abierto_trabajo.JPG", 
-            
         ],
         3: [
             "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/escritorio_cerrado_trabajo.JPG", 
@@ -36,17 +35,10 @@ class CarruselState(rx.State):
         7:[
             "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/mueble_armario_trabajo.JPG",
         ],
-        
-
-
     }
 
     @rx.event
     def cambiar_imagen(self, carrusel_id: int, direccion: int):
-        """
-        carrusel_id: número del carrusel (1-9)
-        direccion: 1 para avanzar, -1 para retroceder
-        """
         self.contadores[carrusel_id] = (
             self.contadores[carrusel_id] + direccion
         ) % len(self.todas_imagenes[carrusel_id])
@@ -81,7 +73,7 @@ class CarruselState(rx.State):
     @rx.var
     def imagen_actual7(self) -> str:
         return self.get_imagen_actual(7)
-    
+
 
 def crear_carrusel(id: int, titulo: str) -> rx.Component:
     return rx.vstack(
@@ -105,7 +97,9 @@ def crear_carrusel(id: int, titulo: str) -> rx.Component:
                 width="auto",
                 height=["200px", "300px", "400px", "500px"],
                 max_width="100%",
-                object_fit="contain"
+                object_fit="contain",
+                class_name="animate__animated animate__fadeIn",
+                key=f"imagen-{id}-{getattr(CarruselState, f'imagen_actual{id}')}"  # Clave única para forzar renderizado
             ),
             rx.image(
                 "/icons/angulo-derecho.png", 

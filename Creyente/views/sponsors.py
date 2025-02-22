@@ -9,33 +9,46 @@ from Creyente.estilo.colors import Color
 
 def sponsors() -> rx.Component:
     return rx.vstack(
+
+        rx.box(
+            title("Donde nos puesdes encontrar ?"),
+            class_name="animate__animated animate__fadeIn"
+        ),
+        rx.box(
+            rx.heading(
+                "Latacunga",
+                color=Color.CONTENT.value
+            ),
+            class_name="animate__animated animate__fadeIn animate__delay-1s"
+        ),
         title("Donde nos puesdes encontrar ?"),
         rx.heading(
             "Latacunga",
-            color=Color.CONTENT.value
+            color=Color.CONTENT.value,
+            class_name="animate__animated animate__jello animate__duration-2s"
         ),
         rx.heading(
             "Ibarra",
             color=Color.CONTENT.value
         ),
-          rx.vstack(
-            link_button(
-                "Ibarra",
-                "Av. beltran frente al campamento Panavial  San Antonio",
-                "/icons/location.svg",
-                const.UBI_IBARRA
+        rx.vstack(
+            rx.button(
+                text=("Ibarra"),
+                # text=("Av. beltran frente al campamento Panavial  San Antonio"),
+                image=("/icons/location.svg"),
+                src=const.UBI_IBARRA
             ),
-                link_button(
-                "Latacunga",
-                "Urb. Estrella de la Mañana",
-                "/icons/location.svg",
-                const.UBI_LATA
+                rx.button(
+                text=("Ibarra"),
+                # text=("Av. beltran frente al campamento Panavial  San Antonio"),
+                image=("/icons/location.svg"),
+                src=const.UBI_IBARRA
             ),
             width="100%",
             align="center",
             justify="center",
-          ),
-          width="100%",
-          align_items="center",
-          spacing=Spacing.DEFAULT.value
+        ),
+        width="100%",
+        align_items="center",
+        spacing=Spacing.DEFAULT.value
     )
