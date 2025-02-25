@@ -7,10 +7,16 @@ class CarruselState(rx.State):
     
     todas_imagenes: dict[int, list[str]] = {
         1: [
-            "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/cafetera_horizontal_1080_web.JPG",
-            "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/cafetera_vertical_cerrado_1080_web.JPG",
-            "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/cafetera_vertical_abierto_1080_web_.JPG",
+            "/trabajos_web/cafetera_horizontal_1080_web.JPG",
+            "/trabajos_web/cafetera_vertical_cerrado_1080_web.JPG",
+            "/trabajos_web/cafetera_vertical_abierto_1080_web_.JPG"
         ],
+        # 1: [
+        #     "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/cafetera_horizontal_1080_web.JPG",
+        #     "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/cafetera_vertical_cerrado_1080_web.JPG",
+        #     "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/cafetera_vertical_abierto_1080_web_.JPG",
+        # ],
+
         2: [
             
             "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/cogador_horizontal_1080_web.JPG",
