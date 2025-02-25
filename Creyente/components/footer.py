@@ -137,7 +137,7 @@ def footer() -> rx.Component:
                     ),
                     padding_y=rx.breakpoints(
                         initial="1em",      
-                        sm=Size.MEDIUM_BIG.value
+                        sm=Size.DEFAULT.value
                     ),
                     gap=rx.breakpoints(
                         initial="1.5em",    

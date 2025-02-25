@@ -25,7 +25,13 @@ gtag('config', '{const.G_TAG}');
         ),
     ],
 )
-# app.add_page(index),
+# app.add_page(index)
+# app.add_page(courses)
+# app.add_page(historia)
+# app.add_page(trabajos)
+# app.add_page(cotizar)
+# app.add_page(mision)
+
 app.api.add_api_route("/repo", repo)
 app.api.add_api_route("/live/{user}", live)
 app.api.add_api_route("/featured", featured)

@@ -11,13 +11,18 @@ def link_material(title: str,
 
     return rx.button(
         rx.hstack(
-            rx.image(
-                src=image,
-                width=Size.SUPER_VERY_BIG.value,
-                height=Size.SUPER_VERY_BIG.value,
-                margin=Size.MEDIUM.value,
-                alt=title
+            rx.link(
+                rx.image(
+                    src=image,
+                    width=Size.SUPER_VERY_BIG.value,
+                    height=Size.SUPER_VERY_BIG.value,
+                    margin=Size.MEDIUM.value,
+                    alt=title
+                ),
+                href=image,
+                custom_attrs={"target": "_self"}
             ),
+            
             rx.vstack(
                 rx.text(
                     title,

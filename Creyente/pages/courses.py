@@ -4,9 +4,7 @@ import Creyente.estilo.estilo as styles
 from Creyente.routes import Route
 from Creyente.components.navbar import navbar
 from Creyente.components.footer import footer
-from Creyente.views.header import header
 from Creyente.views.courses_links import courses_links
-from Creyente.views.sponsors import sponsors
 from Creyente.estilo.estilo import Size
 
 
@@ -23,9 +21,7 @@ def courses() -> rx.Component:
         navbar(),
         rx.center(
             rx.vstack(
-                # header(False),
                 courses_links(),
-                sponsors(),
                 max_width=styles.MAX_WIDTH,
                 width="100%",
                 margin_y=Size.ZERO.value,

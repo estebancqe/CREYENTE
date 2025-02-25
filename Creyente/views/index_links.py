@@ -61,7 +61,7 @@ def index_links() -> rx.Component:
                 "Consulta los diferentes colores que puedes elegir",
                 "/icons/book-solid.svg",
                 Route.COURSES.value,
-                True,
+                False,
                 Color.GRIS.value
             ),
             link_button(
