@@ -1,5 +1,5 @@
 import reflex as rx
-from Creyente.estilo.estilo import Size
+from Creyente.style.style import Size
 
 def link_sponsor(imagen: str, url: str, alt: str) -> rx.Component:
     return rx.link(

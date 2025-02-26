@@ -1,6 +1,6 @@
 import reflex as rx
-from Creyente.estilo.estilo import Size
-from Creyente.estilo.colors import Color, TextColor 
+from Creyente.style.style import Size
+from Creyente.style.colors import Color, TextColor 
 
 def info_text(title: str, body: str) -> rx.Component:
     return rx.box(

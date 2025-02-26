@@ -1,10 +1,10 @@
 import reflex as rx
 import Creyente.constants as const
-from Creyente.estilo.estilo import Size,Spacing
+from Creyente.style.style import Size,Spacing
 from Creyente.components.title import title
 from Creyente.components.link_sponsor import link_sponsor
 from Creyente.components.link_button import link_button
-from Creyente.estilo.colors import Color
+from Creyente.style.colors import Color
 
 
 def sponsors() -> rx.Component:

@@ -1,12 +1,12 @@
 import reflex as rx
 import Creyente.utils as utils
-import Creyente.estilo.estilo as styles
+import Creyente.style.style as styles
 from Creyente.components.navbar import navbar
 from Creyente.components.footer import footer
 from Creyente.views.header import header
 from Creyente.views.index_links import index_links
 from Creyente.views.sponsors import sponsors
-from Creyente.estilo.estilo import Size, Spacing
+from Creyente.style.style import Size, Spacing
 from Creyente.routes import Route
 
 @rx.page(

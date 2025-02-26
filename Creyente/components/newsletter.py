@@ -1,8 +1,8 @@
 import reflex as rx
 import Creyente.constants as const
 from Creyente.components.link_button import link_button
-from Creyente.estilo.colors import Color
-from Creyente.estilo.estilo import Spacing
+from Creyente.style.colors import Color
+from Creyente.style.style import Spacing
 
 
 def newsletter() -> rx.Component:

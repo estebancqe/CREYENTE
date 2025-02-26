@@ -1,10 +1,10 @@
 import reflex as rx
 from Creyente.components.link_material import link_material
 from Creyente.components.title import title
-from Creyente.estilo.estilo import Spacing, Size
+from Creyente.style.style import Spacing, Size
 
 
-def courses_links() -> rx.Component:
+def color_melamina() -> rx.Component:
     return rx.vstack(
         title("Melamina en Diferentes Colores"),
         rx.grid(

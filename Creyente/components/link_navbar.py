@@ -1,6 +1,6 @@
 import reflex as rx
-import Creyente.estilo.estilo as styles
-from Creyente.estilo.estilo import Color
+import Creyente.style.style as styles
+from Creyente.style.style import Color
 
 def link_navbar(title:str,url: str, alt: str) -> rx.Component:
     return rx.link(

@@ -1,4 +1,4 @@
-from Creyente.api.SubabaseApi_client import BaseAPI
+from Creyente.api.client_supabase import BaseAPI
 from Creyente.model.MODELOS import MODELOS
 
 class ModelosAPI(BaseAPI):

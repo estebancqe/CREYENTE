@@ -1,8 +1,8 @@
 import reflex as rx
 import datetime
 import Creyente.constants as const
-from Creyente.estilo.estilo import Size,Spacing
-from Creyente.estilo.colors import Color, TextColor
+from Creyente.style.style import Size,Spacing
+from Creyente.style.colors import Color, TextColor
 from Creyente.components.link_icon import link_icon
 from Creyente.components.info_text import info_text
 from Creyente.components.link_button import link_button

@@ -1,5 +1,5 @@
 import reflex as rx
-import Creyente.estilo.estilo as styles
+import Creyente.style.style as styles
 
 
 def title(text: str) -> rx.Component:

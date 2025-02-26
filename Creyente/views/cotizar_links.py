@@ -1,7 +1,7 @@
 import reflex as rx
 from Creyente.state.PageState import PageState
 from Creyente.routes import Route
-from Creyente.estilo.estilo import Color, Spacing  ,Size 
+from Creyente.style.style import Color, Spacing  ,Size 
 from Creyente.components.link_button import link_button
 from Creyente.components.title import title 
 # from Creyente.Presupuesto.hereda.modelos_melamina import modelos_melamina

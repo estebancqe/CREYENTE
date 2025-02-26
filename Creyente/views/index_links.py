@@ -1,12 +1,12 @@
 import reflex as rx
 import Creyente.constants as const
-import Creyente.estilo.estilo as estilo
-from Creyente.components.link_image_muestra import link_image_muestra
+import Creyente.style.style as style
+from Creyente.components.imagen_muestra_index import imagen_muestra_index
 from Creyente.routes import Route
 from Creyente.components.link_button import link_button
 from Creyente.components.title import title
-from Creyente.estilo.estilo import Color, Spacing
-from Creyente.state.PageState import PageState
+from Creyente.style.style import Color, Spacing
+# from Creyente.state.PageState import PageState
 
 
 def index_links() -> rx.Component:
@@ -60,7 +60,7 @@ def index_links() -> rx.Component:
                 "Catalago de Materiales",
                 "Consulta los diferentes colores que puedes elegir",
                 "/icons/book-solid.svg",
-                Route.COURSES.value,
+                Route.MELAMINA.value,
                 False,
                 Color.GRIS.value
             ),
@@ -85,7 +85,7 @@ def index_links() -> rx.Component:
                 "CONOCE NUESTROS MODELOS",
                 size=Spacing.MEDIUM_BIG.value,
                 color=Color.SECOND_TITTLE.value,
-                style=estilo.style_secod_tittle,
+                style=style.style_secod_tittle,
             ),
             rx.link(
                 rx.image(
@@ -107,19 +107,19 @@ def index_links() -> rx.Component:
 
         rx.flex(
             rx.grid(
-                link_image_muestra(
+                imagen_muestra_index(
                     "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/fotos%20trabajos%20web/mueble_cocina_electrodomesticos_copy.JPG",
                     "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/fotos%20trabajos%20web/imagenes%20completas%20full%20definicion/mueble_cocina_electrodomesticos.JPG",
                 ),
-                link_image_muestra(
+                imagen_muestra_index(
                     "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/fotos%20trabajos%20web/mueble_armario%20copy.JPG",
                     "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/fotos%20trabajos%20web/imagenes%20completas%20full%20definicion/mueble_armario.JPG",
                 ),
-                link_image_muestra(
+                imagen_muestra_index(
                     "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/fotos%20trabajos%20web/cafetera_vertical_cerrado%20copy.JPG",
                     "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/fotos%20trabajos%20web/imagenes%20completas%20full%20definicion/cafetera_vertical_cerrado.JPG",
                 ),
-                link_image_muestra(
+                imagen_muestra_index(
                     "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/fotos%20trabajos%20web/mueble_sala_vertical%20copy.JPG",
                     "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/fotos%20trabajos%20web/imagenes%20completas%20full%20definicion/mueble_sala_vertical.JPG",
                 ),
@@ -156,5 +156,5 @@ def index_links() -> rx.Component:
         ),
         width="100%",
         spacing=Spacing.DEFAULT.value,
-        on_mount=PageState.featured_links
+        # on_mount=PageState.featured_links
     )   

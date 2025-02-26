@@ -1,6 +1,6 @@
 import reflex as rx
-import Creyente.estilo.estilo as styles
-from Creyente.estilo.estilo import Size, Spacing, Color
+import Creyente.style.style as styles
+from Creyente.style.style import Size, Spacing, Color
 
 
 def link_material(title: str,

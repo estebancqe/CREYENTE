@@ -1,6 +1,6 @@
 import reflex as rx
 from Creyente.state.PageState import MuebleState,ModelosState
-from Creyente.estilo.estilo import Spacing, Size
+from Creyente.style.style import Spacing, Size
 from Creyente.Presupuesto.acordion_modelos import acordion_modelos
 
 

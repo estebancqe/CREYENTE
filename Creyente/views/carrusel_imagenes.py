@@ -1,6 +1,6 @@
 import reflex as rx
-from Creyente.estilo.estilo import Size
-from Creyente.estilo.colors import Color
+from Creyente.style.style import Size
+from Creyente.style.colors import Color
 
 class CarruselState(rx.State):
     contadores: dict[int, int] = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0}
@@ -18,10 +18,12 @@ class CarruselState(rx.State):
         # ],
 
         2: [
-            
-            "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/cogador_horizontal_1080_web.JPG",
-            "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/colgador_vertical_cerrado_1080_web.JPG",
-            "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/colgador_vertical_abierto_1080_web.JPG",
+            "/trabajos_web/cogador_horizontal_1080_web.JPG",
+            "/trabajos_web/colgador_vertical_cerrado_1080_web.JPG",
+            "/trabajos_web/colgador_vertical_abierto_1080_web.JPG",
+            # "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/cogador_horizontal_1080_web.JPG",
+            # "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/colgador_vertical_cerrado_1080_web.JPG",
+            # "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/colgador_vertical_abierto_1080_web.JPG",
         ],
         3: [
             "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/escritorio_cerrado_1080_web.JPG",

@@ -1,6 +1,6 @@
 import reflex as rx
 
-def link_image_muestra(image: str, url:str) -> rx.Component:
+def imagen_muestra_index(image: str, url:str) -> rx.Component:
     return rx.link(
         rx.image(
             image,

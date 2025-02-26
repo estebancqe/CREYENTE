@@ -1,6 +1,6 @@
 import reflex as rx
-import Creyente.estilo.estilo as styles
-from Creyente.estilo.estilo import Size, Spacing, TextColor, Color
+import Creyente.style.style as styles
+from Creyente.style.style import Size, Spacing, TextColor, Color
 
 def link_button(title: str,
                 body: str,
