@@ -10,10 +10,10 @@ from Creyente.style.style import Size
 
 @rx.page(
     route=Route.MELAMINA.value,
-    title=utils.courses_title,
-    description=utils.courses_description,
+    title=utils.melamina_title,
+    description=utils.melamina_description,
     image=utils.preview,
-    meta=utils.courses_meta
+    meta=utils.melamina_meta
 )
 def melamina() -> rx.Component:
     return rx.box(

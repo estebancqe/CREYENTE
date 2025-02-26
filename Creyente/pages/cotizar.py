@@ -13,10 +13,10 @@ from Creyente.state.PageState import PageState
 
 @rx.page(
     route=Route.COTIZAR.value,
-    title=utils.courses_title,
-    description=utils.courses_description,
+    title=utils.cotizar_title,
+    description=utils.cotizar_description, 
     image=utils.preview,
-    meta=utils.courses_meta,
+    meta=utils.cotizar_meta,
     on_load=[PageState.muebles_links,PageState.modelo_links]
 )
 def cotizar() -> rx.Component:

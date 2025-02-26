@@ -9,10 +9,10 @@ from Creyente.routes import Route
 
 @rx.page(
     route=Route.TRABAJOS.value,
-    title=utils.courses_title,
-    description=utils.courses_description,
+    title=utils.trabajo_title,
+    description=utils.trabajo_description,
     image=utils.preview,
-    meta=utils.courses_meta
+    meta=utils.trabajo_meta
 )
 
 def trabajos() -> rx.Component:

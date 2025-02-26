@@ -36,3 +36,37 @@ courses_meta = [
     {"name": "og:description", "content": courses_description},
 ]
 courses_meta.extend(_meta)
+
+# Metadatos para la página de melamina
+melamina_title = "Melamina | Colores y Texturas"
+melamina_description = "Colores y texturas disponibles para tus pedidos"
+
+melamina_meta = [
+    {"name": "og:title", "content": melamina_title},
+    {"name": "og:description", "content": melamina_description},
+]
+melamina_meta.extend(_meta)
+
+
+
+# Metadatos para la página de trabajos
+trabajo_title = "Trabajos | nuestros diseños"
+trabajo_description = "algunos de los trabajamos que hemos hecho"
+
+trabajo_meta = [
+    {"name": "og:title", "content": trabajo_title},
+    {"name": "og:description", "content": trabajo_description},
+]
+trabajo_meta.extend(_meta)
+
+
+
+# Metadatos para la página de cotizar
+cotizar_title = "Cotizar | Precios referenciales"
+cotizar_description = "Los modelos con sus precios referenciales"
+
+cotizar_meta = [
+    {"name": "og:title", "content": cotizar_title},
+    {"name": "og:description", "content": cotizar_description},
+]
+cotizar_meta.extend(_meta)
