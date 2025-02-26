@@ -4,6 +4,6 @@ from Creyente.style.colors import Color
 
 
 def courses_links() -> rx.Component:
-    return rx.vstack(
-
+    return rx.hstack(
+        
     ),
