@@ -11,14 +11,15 @@ def sponsors() -> rx.Component:
     return rx.vstack(
 
         rx.box(
-            title("Donde nos puesdes encontrar ?"),
+            title("Donde nos puedes encontrar ?"),
             class_name="animate__animated animate__fadeIn"
         ),
         rx.box(
             rx.heading(
                 "Latacunga",
                 color=Color.CONTENT.value,
-                class_name="animate__animated animate__fadeIn animate__delay-1s"
+                class_name="animate__animated animate__fadeIn animate__delay-1s",
+                
             ),     
         ),
         rx.box(

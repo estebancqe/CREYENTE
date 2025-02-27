@@ -84,7 +84,10 @@ navbar_title_style = dict(
 title_style = dict(
     width="100%",
     padding_top=Size.DEFAULT.value,
-    font_size=Size.BIG.value
+    font_size=[
+        Size.DEFAULT.value,
+        Size.BIG.value
+    ],
 )
 button_title_material_style = dict(
     font_family=Font.TITLE.value,
