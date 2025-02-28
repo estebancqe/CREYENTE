@@ -5,6 +5,7 @@ from Creyente.components.navbar import navbar
 from Creyente.components.footer import footer
 from Creyente.views.sponsors import sponsors
 from Creyente.views.historia_links import historia_link
+from Creyente.components.carrusel_index import producto
 from Creyente.style.style import Size, Spacing
 from Creyente.routes import Route
 
@@ -27,6 +28,7 @@ def historia() -> rx.Component:
                     color="silver",
                 ),
                 historia_link(),
+                producto(),
                 # sponsors(),
                 max_width=styles.MAX_WIDTH,
                 width="100%",
@@ -36,3 +38,4 @@ def historia() -> rx.Component:
         ),
         footer()
     )
+
