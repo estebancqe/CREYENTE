@@ -33,7 +33,5 @@ gtag('config', '{const.G_TAG}');
 # app.add_page(mision)
 
 app.api.add_api_route("/repo", repo)
-# app.api.add_api_route("/live/{user}", live)
-# app.api.add_api_route("/featured", featured)
 app.api.add_api_route("/api_Muebles",api_Muebles)
 app.api.add_api_route("/api_Modelos",api_Modelos)

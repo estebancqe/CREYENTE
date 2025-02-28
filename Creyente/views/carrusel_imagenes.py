@@ -26,23 +26,32 @@ class CarruselState(rx.State):
             # "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/colgador_vertical_abierto_1080_web.JPG",
         ],
         3: [
-            "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/escritorio_cerrado_1080_web.JPG",
-            "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/escritorio%20_abierto_1080_web.JPG",
+            "/trabajos_web/escritorio_cerrado_1080_web.JPG",
+            "/trabajos_web/escritorio_abierto_1080_web.JPG",
+            # "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/escritorio_cerrado_1080_web.JPG",
+            # "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/escritorio%20_abierto_1080_web.JPG",
         ],
         4: [
+            "/trabajos_web/mueble_sala_horizontal_1080_web.JPG",
+            "/trabajos_web/mueble_sala_vertical_1080_web.JPG",
             "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/mueble_sala_horizontal_1080_web.JPG",
             "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/mueble_sala_vertical_1080_web.JPG",
         ],
         5:[
-            "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/mueble_cocina_electrodomesticos_1080_web.JPG",
-            "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/mueble_cocina_alacena_1080_web.JPG",
-            "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/mueble_cocina_horno_alacena_1080_web.JPG",
+            "/trabajos_web/mueble_cocina_electrodomesticos_1080_web.JPG",
+            "/trabajos_web/mueble_cocina_alacena_1080_web.JPG",
+            "/trabajos_web/mueble_cocina_horno_alacena_1080_web.JPG",
+            # "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/mueble_cocina_electrodomesticos_1080_web.JPG",
+            # "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/mueble_cocina_alacena_1080_web.JPG",
+            # "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/mueble_cocina_horno_alacena_1080_web.JPG",
         ],
         6:[
-            "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/estudio_con_homenaje_1080_web.JPG",
+            "/trabajos_web/estudio_con_homenaje_1080_web.JPG",
+            # "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/estudio_con_homenaje_1080_web.JPG",
         ],
         7:[
-            "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/mueble_armario_1080_web.JPG",
+            "/trabajos_web/mueble_armario_1080_web.JPG",
+            # "https://sxdosvvnlmtjzebydzyy.supabase.co/storage/v1/object/public/imagenes%20para%20el%20proyecto/imagenes%20trabajos/1080_web/mueble_armario_1080_web.JPG",
         ],
     }
 

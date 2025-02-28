@@ -22,9 +22,7 @@ def trabajos() -> rx.Component:
             rx.vstack(
                 # header(),
                 rx.text("TRABAJOS", size=Spacing.VERY_BIG.value,color="silver"),
-                # carrusel(),
                 ejemplo_carrusel(),
-                
                 max_width=styles.MAX_WIDTH,
                 width="100%",
                 margin_y=Size.BIG.value,
