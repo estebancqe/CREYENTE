@@ -29,8 +29,8 @@ def lazy_image() -> rx.Component:
             src=ImageState.current_image,
             alt="Collection image",
             loading="lazy",
-            width="auto", 
-            height="600px",
+            width="auto",
+            height=["200px", "300px", "400px", "500px"],
             border_radius="15px 50px",
             box_shadow="rgba(151, 65, 252, 0.8) 0 15px 30px -10px",
             opacity=1
