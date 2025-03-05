@@ -4,7 +4,7 @@ import Creyente.style.style as styles
 from Creyente.components.navbar import navbar
 from Creyente.components.footer import footer
 from Creyente.views.header import header
-from Creyente.views.index_links import index_links
+from Creyente.components.componente_web import review_carousel
 from Creyente.views.sponsors import sponsors
 from Creyente.style.style import Size, Spacing
 from Creyente.routes import Route
@@ -24,6 +24,7 @@ def mision() -> rx.Component:
             rx.vstack(
                 # header(),
                 rx.text("MISION", size=Spacing.VERY_BIG.value,color="silver"),
+                review_carousel(),
                 sponsors(),
                 max_width=styles.MAX_WIDTH,
                 width="100%",
