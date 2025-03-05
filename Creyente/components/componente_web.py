@@ -151,47 +151,55 @@ def crear_carrusel(id: int, titulo: str) -> rx.Component:
             color=Color.CONTENT.value,
             text_align="center"
         ),
-        rx.hstack(
-            # Imagen izquierda (anterior)
-            rx.image(
-                src=getattr(CarruselState, f"imagen_anterior{id}"),
-                width="auto",
-                height="200px",
-                max_width="100%",
-                opacity="0.5",
-                object_fit="contain",
-                on_click=lambda: CarruselState.cambiar_imagen(id, -1),
-            ),
-            # Imagen central (actual)
-            rx.image(
-                src=getattr(CarruselState, f"imagen_actual{id}"),
-                width="auto",
-                height=["200px", "300px", "400px", "500px"],
-                max_width="100%",
-                object_fit="contain",
-                class_name="animate__animated animate__fadeIn",
-                key=f"imagen-{id}-{getattr(CarruselState, f'imagen_actual{id}')}",
-            ),
-            # Imagen derecha (siguiente)
-            rx.image(
-                src=getattr(CarruselState, f"imagen_siguiente{id}"),
-                width="auto",
-                height="200px",
-                max_width="100%",
-                opacity="0.5",
-                object_fit="contain",
-                on_click=lambda: CarruselState.cambiar_imagen(id, 1),
+        rx.box(
+            rx.hstack(
+                # Imagen izquierda (anterior)
+                rx.image(
+                    src=getattr(CarruselState, f"imagen_anterior{id}"),
+                    width="auto",
+                    height=["100px", "150px", "200px", "250px"],
+                    max_width=["0", "0", "30%", "30%"],  # Oculta en móvil
+                    opacity="0.5",
+                    object_fit="contain",
+                    display=["none", "none", "flex", "flex"],  # Oculta en móvil
+                    on_click=lambda: CarruselState.cambiar_imagen(id, -1),
+                ),
+                # Imagen central (actual)
+                rx.image(
+                    src=getattr(CarruselState, f"imagen_actual{id}"),
+                    width="auto",
+                    height=["200px", "300px", "400px", "500px"],
+                    max_width="100%",
+                    object_fit="contain",
+                    class_name="animate__animated animate__fadeIn",
+                    key=f"imagen-{id}-{getattr(CarruselState, f'imagen_actual{id}')}",
+                ),
+                # Imagen derecha (siguiente)
+                rx.image(
+                    src=getattr(CarruselState, f"imagen_siguiente{id}"),
+                    width="auto",
+                    height=["100px", "150px", "200px", "250px"],
+                    max_width=["0", "0", "30%", "30%"],  # Oculta en móvil
+                    opacity="0.5",
+                    object_fit="contain",
+                    display=["none", "none", "flex", "flex"],  # Oculta en móvil
+                    on_click=lambda: CarruselState.cambiar_imagen(id, 1),
+                ),
+                width="100%",
+                spacing="4",
+                align="center",
+                justify="center",
+                padding="2",
+                overflow="hidden",  # Previene scroll horizontal
             ),
             width="100%",
-            spacing="4",
-            align="center",
-            justify="center",
-            padding="2"
+            overflow="hidden",  # Previene scroll horizontal
         ),
         width="100%",
         align="center",
         margin="2"
     )
+
 
 def review_carousel():
     return rx.vstack(
