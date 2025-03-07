@@ -8,7 +8,6 @@ MAX_WIDTH = "100%"
 # En estilo.py
 FADEIN_ANIMATION = "animate__animated animate__jello animate__duration-2s"
 BOUNCEIN_ANIMATION = "animate__animated animate__rubberBand animate__duration-3s"
-
 # Sizes
 
 STYLESHEETS = [
@@ -18,6 +17,34 @@ STYLESHEETS = [
     "/css/styles.css"
 ]
 
+
+
+carousel_styles = {
+    "swiper-container": {
+        "width": "100%",
+        "height": "400px",
+        "padding": "20px",
+        "overflow": "hidden",
+        "position": "relative"
+    },
+    "swiper-wrapper": {
+        "display": "flex",
+        "transition": "transform 0.3s ease-in-out"
+    },
+    "swiper-slide": {
+        "flex_shrink": "0",
+        "width": "100%",
+        "height": "100%"
+    },
+    "swiper-pagination": {
+        "position": "absolute",
+        "bottom": "10px",
+        "width": "100%",
+        "display": "flex",
+        "justify_content": "center",
+        "gap": "10px"
+    }
+}   
 
 class Size(Enum):
     ZERO = "0px !important"
@@ -67,6 +94,9 @@ BASE_STYLE = {
         "_hover": {
             "background_color": Color.SECONDARY.value
         }
+
+
+    
     },
     rx.link: {
         "color": TextColor.BODY.value,
