@@ -20,8 +20,8 @@ class CarouselState(rx.State):
         
     def prev_slide(self):
         self.show_slide = (self.show_slide - 1) % 5
-
-def carrusel():
+    
+def carrusel_tailwaind():
     images = [
         "/trabajos_web/cafetera_horizontal_1080_web.JPG",
         "/trabajos_web/cogador_horizontal_1080_web.JPG", 

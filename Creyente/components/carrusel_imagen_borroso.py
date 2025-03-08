@@ -201,7 +201,7 @@ def crear_carrusel(id: int, titulo: str) -> rx.Component:
     )
 
 
-def review_carousel():
+def carousel_imagenes_borrosa_lateral():
     return rx.vstack(
         crear_carrusel(1, "Mueble Cafetera"),
         crear_carrusel(2, "Perchero"),
