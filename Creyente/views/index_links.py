@@ -6,8 +6,6 @@ from Creyente.routes import Route
 from Creyente.components.link_button import link_button
 from Creyente.components.title import title
 from Creyente.style.style import Color, Spacing
-# from Creyente.state.PageState import PageState
-
 
 def index_links() -> rx.Component:
     return rx.vstack(
@@ -156,5 +154,4 @@ def index_links() -> rx.Component:
         ),
         width="100%",
         spacing=Spacing.DEFAULT.value,
-        # on_mount=PageState.featured_links
     )   
