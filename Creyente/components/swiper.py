@@ -4,7 +4,7 @@ import reflex as rx
 def swiper_component():
     images = [
         {
-            "src": "/trabajos_web/cafetera_horizontal_1080_web.JPG",
+            "src": "/trabajos_web/cafetera_vertical_cerrado_1080_web.JPG",
             "title": "Cafetera Horizontal"
         },
         {
@@ -21,7 +21,7 @@ def swiper_component():
         },
         {
             "src": "/trabajos_web/estudio_con_homenaje_1080_web.JPG",
-            "title": "Estudio con Homenaje"
+            "title": "Estudio con Homenaje" 
         }
     ]
     

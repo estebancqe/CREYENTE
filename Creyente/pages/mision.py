@@ -46,12 +46,12 @@ class SwiperState(rx.State):
                         slidesPerView: 2
                     },
                     1024: {
-                        slidesPerView: 3
+                        slidesPerView: 2
                     }
                 }
             });
             """
-        )
+        ) 
     
 @rx.page(
     route=Route.MISION.value,
