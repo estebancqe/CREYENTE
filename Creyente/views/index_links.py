@@ -5,6 +5,7 @@ from Creyente.components.imagen_muestra_index import imagen_muestra_index
 from Creyente.routes import Route
 from Creyente.components.link_button import link_button
 from Creyente.components.title import title
+from Creyente.components.swiper import swiper_component
 from Creyente.style.style import Color, Spacing
 
 def index_links() -> rx.Component:
@@ -51,6 +52,16 @@ def index_links() -> rx.Component:
             align="center",
             justify="between"
         ),
+
+
+        # title("GALERÍA"),
+        # rx.container(
+        #     swiper_component(),
+        #     width="100%",
+        #     margin_y="4"
+        # ),
+
+
         
         title("Cátalogo De Materiales"),
         rx.flex(

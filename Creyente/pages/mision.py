@@ -12,9 +12,6 @@ import Creyente.utils as utils
 import Creyente.style.style as styles
 
 # mision.py
-# ... (mantén las importaciones como están)
-
-# mision.py
 class SwiperState(rx.State):
     current_slide: int = 1
     total_slides: int = 5
@@ -51,7 +48,7 @@ class SwiperState(rx.State):
                 }
             });
             """
-        ) 
+        )
     
 @rx.page(
     route=Route.MISION.value,

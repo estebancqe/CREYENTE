@@ -67,7 +67,7 @@ def swiper_component():
                 background_color="rgba(255,255,255,0.9)",
                 padding="0.5em 1em",
                 border_radius="2em",
-                position="absolute",
+                position="absolute",    
                 bottom="1em",
                 right="1em", 
                 z_index="10",

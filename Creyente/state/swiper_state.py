@@ -1,11 +1,10 @@
 import reflex as rx
-
-class SwiperState(rx.State):
+class SwiperState1(rx.State):
     current_slide: int = 1
     total_slides: int = 5
 
     @rx.event
-    def init_swiper(self):
+    def init_swiper (self):
         return rx.call_script(
             """
             new Swiper('.swiper-container', {

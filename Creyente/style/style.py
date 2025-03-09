@@ -18,6 +18,34 @@ STYLESHEETS = [
 ]
 
 
+import reflex as rx
+
+swiper_styles_index = {
+    ".swiper-container": {
+        "width": "100%",
+        "height": "100%",
+        "position": "relative",
+    },
+    ".swiper-slide": {
+        "text-align": "center",
+        "background": "#fff",
+        "display": "flex",
+        "justify_content": "center",
+        "align_items": "center",
+    },
+    ".mobile-indicator": {
+        "position": "absolute",
+        "bottom": "20px",
+        "left": "50%",
+        "transform": "translateX(-50%)",
+        "z_index": "1",
+        "color": "#000",
+        "background": "rgba(255, 255, 255, 0.8)",
+        "padding": "5px 10px",
+        "border_radius": "15px",
+    }
+}
+
 
 carousel_styles = {
     "swiper-container": {
