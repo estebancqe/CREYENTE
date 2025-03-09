@@ -1,35 +1,30 @@
+# Creyente/components/carrusel_tailwind.py
 import reflex as rx
-import asyncio
 
 class CarouselState(rx.State):
-    show_slide: int = 0
-    auto_play: bool = True
-    
-    @rx.event(background=True)
-    async def auto_advance(self):
-        while self.auto_play:
-            await asyncio.sleep(3)
-            async with self:
-                self.show_slide = (self.show_slide + 1) % 5
-    
+    show_slide: int = 0  # Índice de la imagen actual
+
     def toggle_slide(self, index: int):
+        """Cambia a una imagen específica usando su índice."""
         self.show_slide = index
-        
+
     def next_slide(self):
+        """Avanza a la siguiente imagen."""
         self.show_slide = (self.show_slide + 1) % 5
-        
+
     def prev_slide(self):
+        """Retrocede a la imagen anterior."""
         self.show_slide = (self.show_slide - 1) % 5
-    
-def carrusel_tailwaind():
+
+def carrusel_tailwind():
     images = [
         "/trabajos_web/cafetera_horizontal_1080_web.JPG",
-        "/trabajos_web/cogador_horizontal_1080_web.JPG", 
+        "/trabajos_web/cogador_horizontal_1080_web.JPG",
         "/trabajos_web/escritorio_cerrado_1080_web.JPG",
         "/trabajos_web/mueble_sala_horizontal_1080_web.JPG",
         "/trabajos_web/estudio_con_homenaje_1080_web.JPG",
     ]
-    
+
     return rx.box(
         rx.box(
             rx.box(
@@ -38,7 +33,7 @@ def carrusel_tailwaind():
                     lambda src, i: rx.box(
                         rx.image(
                             src=src,
-                            alt=f"Slide {i+1}",
+                            alt=f"Slide {i + 1}",
                             width="100%",
                             height=rx.breakpoints(
                                 initial="300px",  # mobile
@@ -63,13 +58,13 @@ def carrusel_tailwaind():
                 width="100%",
                 height=rx.breakpoints(
                     initial="300px",  # mobile
-                    sm="400px",       # tablet  
+                    sm="400px",       # tablet
                     lg="500px"        # desktop
                 ),
                 overflow="hidden",
                 border_radius="lg",
             ),
-            
+
             # Indicadores
             rx.box(
                 rx.foreach(
@@ -78,8 +73,8 @@ def carrusel_tailwaind():
                         type_="button",
                         width=rx.breakpoints(
                             initial="8px",    # mobile
-                            sm="10px",        # tablet
-                            lg="12px"         # desktop
+                            sm="10px",         # tablet
+                            lg="12px"          # desktop
                         ),
                         height=rx.breakpoints(
                             initial="8px",    # mobile
@@ -112,8 +107,8 @@ def carrusel_tailwaind():
                 transform="translateX(-50%)",
                 display="flex",
             ),
-            
-            # Botones de navegación con tamaño ajustado
+
+            # Botones de navegación
             rx.button(
                 rx.icon(
                     "chevron_left",
@@ -137,12 +132,12 @@ def carrusel_tailwaind():
                 border_radius="full",
                 padding=rx.breakpoints(
                     initial="4",      # mobile
-                    sm="5",          # tablet
-                    lg="6"           # desktop
+                    sm="5",           # tablet
+                    lg="6"            # desktop
                 ),
-                height="fit-content",  # Ajusta la altura al contenido
-                min_height="40px",     # Altura mínima del botón
-                width="40px",          # Ancho fijo del botón
+                height="fit-content",
+                min_height="40px",
+                width="40px",
                 on_click=CarouselState.prev_slide,
                 _hover={"bg": "rgba(0,0,0,0.8)"}
             ),
@@ -169,12 +164,12 @@ def carrusel_tailwaind():
                 border_radius="full",
                 padding=rx.breakpoints(
                     initial="4",      # mobile
-                    sm="5",          # tablet
-                    lg="6"           # desktop
+                    sm="5",           # tablet
+                    lg="6"            # desktop
                 ),
-                height="fit-content",  # Ajusta la altura al contenido
-                min_height="40px",     # Altura mínima del botón
-                width="40px",          # Ancho fijo del botón
+                height="fit-content",
+                min_height="40px",
+                width="40px",
                 on_click=CarouselState.next_slide,
                 _hover={"bg": "rgba(0,0,0,0.8)"}
             ),
