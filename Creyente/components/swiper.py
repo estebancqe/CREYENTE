@@ -1,7 +1,7 @@
 # swiper.py
 import reflex as rx
 
-def swiper_component():
+def  swiper_component():
     images = [
         {
             "src": "/trabajos_web/cafetera_vertical_cerrado_1080_web.JPG",

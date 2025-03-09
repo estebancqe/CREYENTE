@@ -6,17 +6,26 @@ from Creyente.components.footer import footer
 from Creyente.views.header import header
 from Creyente.views.index_links import index_links
 from Creyente.style.style import Size
-
+from Creyente.components.swiper import swiper_component  # Importa el componente swiper
+from Creyente.pages.mision import SwiperState  # Importa el estado SwiperState
 
 @rx.page(
     title=utils.index_title,
     description=utils.index_description,
     image=utils.preview,
-    meta=utils.index_meta,
-    
+    meta=utils.index_meta, 
 )
 def index() -> rx.Component:
     return rx.box(
+        # Scripts de Swiper
+        rx.script(
+            src="https://unpkg.com/swiper/swiper-bundle.min.css",
+            type="text/css"
+        ),
+        rx.script(
+            src="https://unpkg.com/swiper/swiper-bundle.min.js",
+            on_ready=SwiperState.init_swiper,  # Asegúrate de definir SwiperState si es necesario
+        ),
         utils.lang(),
         navbar(),
         rx.center(
