@@ -74,7 +74,7 @@ def mision() -> rx.Component:
                     rx.heading("MISION", size=Spacing.VERY_BIG.value, color="silver"),
                     carrusel_tailwaind(),
                     rx.box(
-                        swiper_component(),
+                        # swiper_component(),
                         width="100%",
                         margin_y="4"
                     ),
