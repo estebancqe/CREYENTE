@@ -14,7 +14,11 @@ import Creyente.style.style as styles
 # mision.py
 # ... (mantén las importaciones como están)
 
+# mision.py
 class SwiperState(rx.State):
+    current_slide: int = 1
+    total_slides: int = 5
+
     @rx.event
     def init_swiper(self):
         return rx.call_script(
@@ -31,6 +35,12 @@ class SwiperState(rx.State):
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev'
                 },
+                on: {
+                    slideChange: function () {
+                        document.querySelector('.mobile-indicator').textContent = 
+                        `${this.realIndex + 1}/${this.slides.length}`;
+                    }
+                },
                 breakpoints: {
                     640: {
                         slidesPerView: 2
@@ -42,7 +52,7 @@ class SwiperState(rx.State):
             });
             """
         )
-
+    
 @rx.page(
     route=Route.MISION.value,
     title=utils.courses_title,
