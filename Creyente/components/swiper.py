@@ -1,7 +1,6 @@
-# swiper.py
 import reflex as rx
 
-def  swiper_component():
+def swiper_component():
     images = [
         {
             "src": "/trabajos_web/cafetera_vertical_cerrado_1080_web.JPG",
@@ -29,18 +28,22 @@ def  swiper_component():
         rx.box(
             rx.foreach(
                 images,
-                lambda image: rx.box(
+                lambda image: rx.box( 
                     rx.box(
                         rx.image(
                             src=image["src"],
-                            width="100%",
+                            width="auto",
                             height="100%",
                             object_fit="cover"
-                        ),
+                        ),  
                         rx.heading(
                             image["title"],
                             color="black",
-                            font_size="1.2em",
+                            font_size=rx.breakpoints(
+                                initial="1rem",
+                                sm="1.2rem", 
+                                lg="1.4rem"
+                            ),
                             background_color="rgba(255,255,255,0.9)",
                             padding="0.5em",
                             border_radius="0.25em",
@@ -49,12 +52,12 @@ def  swiper_component():
                             left="1em",
                             z_index="10",
                             box_shadow="0 2px 4px rgba(0,0,0,0.2)"
-                        ),
+                        ), 
                         position="relative",
                         width="100%",
-                        height="100%"
+                        height="100%",
                     ),
-                    class_name="swiper-slide"
+                    class_name="swiper-slide",
                 )
             ),
             class_name="swiper-wrapper"
@@ -71,7 +74,11 @@ def  swiper_component():
                 bottom="1em",
                 right="1em", 
                 z_index="10",
-                display=["block"]
+                display=rx.breakpoints(
+                    initial="block",
+                    sm="block",
+                    lg="block"
+                )
             )
         ),
         rx.box(class_name="swiper-pagination"),
@@ -79,5 +86,16 @@ def  swiper_component():
         rx.box(class_name="swiper-button-prev"),
         class_name="swiper-container",
         width="100%",
-        position="relative"
+        height=rx.breakpoints(
+            initial="300px",
+            sm="400px",
+            lg="500px"
+        ),
+        overflow="hidden",
+        position="relative",
+        margin_y=rx.breakpoints(
+            initial="1em",
+            sm="2em",
+            lg="2em" 
+        ) 
     )

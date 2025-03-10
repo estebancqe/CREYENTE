@@ -13,43 +13,56 @@ import Creyente.style.style as styles
 
 # mision.py
 class SwiperState(rx.State):
-    current_slide: int = 1
-    total_slides: int = 5
-
     @rx.event
     def init_swiper(self):
         return rx.call_script(
             """
             new Swiper('.swiper-container', {
                 slidesPerView: 1,
-                spaceBetween: 20,
+                spaceBetween: 30,
                 loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
                 pagination: {
                     el: '.swiper-pagination',
-                    clickable: true
+                    clickable: true,
                 },
                 navigation: {
                     nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev'
-                },
-                on: {
-                    slideChange: function () {
-                        document.querySelector('.mobile-indicator').textContent = 
-                        `${this.realIndex + 1}/${this.slides.length}`;
-                    }
+                    prevEl: '.swiper-button-prev',
                 },
                 breakpoints: {
                     640: {
-                        slidesPerView: 2
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
                     },
                     1024: {
-                        slidesPerView: 2
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                    },
+                },
+                on: {
+                    slideChange: function () {
+                        const indicator = document.querySelector('.mobile-indicator');
+                        if (indicator) {
+                            indicator.textContent = `${this.realIndex + 1}/${this.slides.length}`;
+                        }
                     }
                 }
             });
             """
-        )
-    
+        ) 
+
 @rx.page(
     route=Route.MISION.value,
     title=utils.courses_title,

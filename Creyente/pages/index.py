@@ -1,3 +1,4 @@
+#index.py
 import reflex as rx
 import Creyente.utils as utils
 import Creyente.style.style as styles
@@ -39,5 +40,6 @@ def index() -> rx.Component:
                 margin_y=Size.BIG.value,
             )
         ),
-        footer()
+        footer(),
+        width="100%",
     )
