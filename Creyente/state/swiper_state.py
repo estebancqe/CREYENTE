@@ -1,41 +1,59 @@
 import reflex as rx
 
-class SwiperState(rx.State):
-    current_slide: int = 1
-    total_slides: int = 5
 
-    @rx.event(background=True)
-    async def init_swiper(self):
+class SwiperState(rx.State):
+    
+    @rx.event
+    def init_swiper(self):
         return rx.call_script(
             """
-            if (typeof Swiper !== 'undefined') {
-                new Swiper('.swiper-container', {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                    loop: true,
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true
+            const swiper = new Swiper('.swiper-container', {
+                slidesPerView: 2,  // Muestra 2 slides en desktop
+                spaceBetween: 30,
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: true,  // Detiene la animación al interactuar
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 1,  // 1 slide en móvil
+                        spaceBetween: 20,
                     },
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev'
+                    768: {
+                        slidesPerView: 2,  // 2 slides en tablet
+                        spaceBetween: 30,
                     },
-                    on: {
-                        slideChange: function () {
-                            document.querySelector('.mobile-indicator').textContent = 
-                            `${this.realIndex + 1}/${this.slides.length}`;
-                        }
+                    1024: {
+                        slidesPerView: 2,  // 2 slides en desktop
+                        spaceBetween: 30,
                     },
-                    breakpoints: {
-                        640: {
-                            slidesPerView: 2
-                        },
-                        1024: {
-                            slidesPerView: 2
+                },
+                on: {
+                    slideChange: function () {
+                        const indicator = document.querySelector('.mobile-indicator');
+                        if (indicator) {
+                            indicator.textContent = `${this.realIndex + 1}/${this.slides.length}`;
                         }
                     }
-                });
-            }
+                }
+            });
+
+            // Detener la animación al interactuar manualmente
+            swiper.on('touchStart', function () {
+                swiper.autoplay.stop();
+            });
+
+            swiper.on('slideChange', function () {
+                swiper.autoplay.stop();
+            });
             """
         )

@@ -8,3 +8,4 @@ class Route(Enum):
     HISTORIA = "/historia"
     MISION = "/mision"
     TRABAJOS = "/trabajos"
+    PRUEBA = "/prueba"

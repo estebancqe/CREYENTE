@@ -7,6 +7,7 @@ from Creyente.pages.cotizar import cotizar
 from Creyente.pages.historia import historia
 from Creyente.pages.mision import mision
 from Creyente.pages.trabajos import trabajos
+from Creyente.pages.prueba import prueba
 from Creyente.api.api import repo,api_Muebles,api_Modelos
 
 app = rx.App(
@@ -25,12 +26,6 @@ app = rx.App(
         ),
     ],
 )
-# app.add_page(index)
-# app.add_page(courses)
-# app.add_page(historia)
-# app.add_page(trabajos)
-# app.add_page(cotizar)
-# app.add_page(mision)
 
 app.api.add_api_route("/repo", repo)
 app.api.add_api_route("/api_Muebles",api_Muebles)

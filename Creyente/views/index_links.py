@@ -1,3 +1,4 @@
+#index_links.py 
 import reflex as rx
 import Creyente.constants as const
 import Creyente.style.style as style
@@ -55,7 +56,7 @@ def index_links() -> rx.Component:
 
 
         title("GALERÍA"),
-        rx.container(
+        rx.grid(
             swiper_component(),
             width="100%",
             margin_y="4"

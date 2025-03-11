@@ -33,6 +33,11 @@ def navbar() -> rx.Component:
                     Route.TRABAJOS.value,
                     "palabra trabajos",
                 ),
+                link_navbar(
+                    "Prueba",
+                    Route.PRUEBA.value,
+                    "palabra inicio",
+                ),
             ),
             spacing="4",
             color=Color.BACKGROUND.value,

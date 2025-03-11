@@ -13,13 +13,4 @@ config = AppConfig(
         "https://creyente.vercel.app",
         "https://jcqsoft.com/creyente",
     ],
-    frontend_packages=[
-        "swiper"
-    ],
-    tailwind={
-        "theme": {
-            "extend": {},
-        },
-        "plugins": ["@tailwindcss/typography"],
-    },
 )

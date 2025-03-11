@@ -1,7 +1,8 @@
+#swiper.py
 import reflex as rx
 
 def swiper_component():
-    images = [
+    images = [ 
         {
             "src": "/trabajos_web/cafetera_vertical_cerrado_1080_web.JPG",
             "title": "Cafetera Horizontal"
@@ -32,7 +33,7 @@ def swiper_component():
                     rx.box(
                         rx.image(
                             src=image["src"],
-                            width="auto",
+                            width="100%",
                             height="100%",
                             object_fit="cover"
                         ),  
@@ -41,8 +42,8 @@ def swiper_component():
                             color="black",
                             font_size=rx.breakpoints(
                                 initial="1rem",
-                                sm="1.2rem", 
-                                lg="1.4rem"
+                                sm="1.2rem",
+                                lg="1.4rem" 
                             ),
                             background_color="rgba(255,255,255,0.9)",
                             padding="0.5em",
@@ -58,10 +59,11 @@ def swiper_component():
                         height="100%",
                     ),
                     class_name="swiper-slide",
+                    style={"width": "50%"}  # Asegura que cada slide ocupe el 50% del ancho
                 )
             ),
             class_name="swiper-wrapper"
-        ),
+        ),   
         rx.box(
             rx.text(
                 "1/5",
