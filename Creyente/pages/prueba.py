@@ -6,6 +6,8 @@ from Creyente.routes import Route
 from Creyente.components.navbar import navbar
 from Creyente.components.footer import footer
 from Creyente.swiper.carousel_container import carousel_container
+from Creyente.swiper.swipe_component import swiper_component
+from Creyente.swiper.swiper_state import SwiperState
 from Creyente.swiper.carousel_state import CarouselState1
 from Creyente.style.style import Size
 
@@ -28,6 +30,12 @@ def prueba() -> rx.Component:
                 rx.vstack(
                     rx.heading("Carrusel de Imágenes",color="silver"),
                     carousel_container(),
+                    rx.text("GALERÍA"),
+                        rx.grid(
+                            swiper_component(),
+                            width="100%",
+                            margin_y="4"
+                        ),
                     align="center",
                     width="100%",
                     spacing="4",

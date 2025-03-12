@@ -23,7 +23,7 @@ def swiper_component():
             "src": "/trabajos_web/estudio_con_homenaje_1080_web.JPG",
             "title": "Estudio con Homenaje" 
         }
-    ] 
+    ]
     
     return rx.box(
         rx.box(
