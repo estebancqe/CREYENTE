@@ -56,11 +56,11 @@ def index_links() -> rx.Component:
         ),
 
 
-        title("GALERÍA"),
-        rx.grid(
-            swiper_component(),
-            width="100%",
-            margin_y="4"
+        rx.text("GALERÍA"),
+            rx.grid(
+                swiper_component(),
+                width="100%",
+                margin_y="4"
         ),
 
 
