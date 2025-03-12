@@ -6,8 +6,8 @@ class AppConfig(rx.Config):
 config = AppConfig(
     app_name="Creyente",
     db_url="sqlite:///reflex.db",
-    env=rx.Env.DEV,
-    api_url="https://creyente.onrender.com",
+    # env=rx.Env.DEV,
+    # api_url="https://creyente.onrender.com",
     cors_allowed_origins=[
         "http://localhost:3000",
         "https://creyente.vercel.app",

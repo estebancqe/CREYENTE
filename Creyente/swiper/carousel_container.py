@@ -1,7 +1,7 @@
 import reflex as rx
 from Creyente.swiper.carousel_state import CarouselState1
 
-def carousel_container():
+def carousel_container(): 
     return rx.vstack(
         rx.image(
             src=CarouselState1.images[CarouselState1.current_image],

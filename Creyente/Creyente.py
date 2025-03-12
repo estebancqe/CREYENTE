@@ -11,7 +11,7 @@ from Creyente.pages.prueba import prueba
 from Creyente.api.api import repo,api_Muebles,api_Modelos
 
 app = rx.App(
-    stylesheets=styles.STYLESHEETS,
+    stylesheets=styles.STYLESHEETS, 
     style=styles.BASE_STYLE,
     head_components=[
         rx.script(

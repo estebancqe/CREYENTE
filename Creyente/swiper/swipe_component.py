@@ -1,10 +1,11 @@
-#swiper.py
+#swiper_component.py
+
 import reflex as rx
 
-def swiper_component():
+def swiper_component(): 
     images = [ 
         {
-            "src": "/trabajos_web/cafetera_vertical_cerrado_1080_web.JPG",
+            "src": "/trabajos_web/cafetera_horizontal_1080_web.JPG",
             "title": "Cafetera Horizontal"
         },
         {
@@ -58,8 +59,7 @@ def swiper_component():
                         width="100%",
                         height="100%",
                     ),
-                    class_name="swiper-slide",
-                    style={"width": "50%"}  # Asegura que cada slide ocupe el 50% del ancho
+                    class_name="swiper-slide"  # No uses style={"width": "50%"}
                 )
             ),
             class_name="swiper-wrapper"

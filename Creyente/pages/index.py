@@ -7,9 +7,8 @@ from Creyente.components.footer import footer
 from Creyente.views.header import header
 from Creyente.views.index_links import index_links
 from Creyente.style.style import Size
-from Creyente.components.swiper import swiper_component  # Importa el componente swiper
+from Creyente.swiper.swipe_component  import swiper_component  # Importa el componente swiper
 from Creyente.swiper.swiper_state import SwiperState  # Importa el estado SwiperState
-from Creyente.pages.mision import SwiperState 
 @rx.page(
     title=utils.index_title,
     description=utils.index_description,

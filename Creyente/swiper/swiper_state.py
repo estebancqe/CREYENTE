@@ -1,3 +1,5 @@
+#swiper_state.py
+
 import reflex as rx
 
 class SwiperState(rx.State):
@@ -5,9 +7,9 @@ class SwiperState(rx.State):
     def init_swiper(self): 
         return rx.call_script(
             """
-            const swiper = new Swiper('.swiper-container', {
-                slidesPerView: 2,  // Muestra 2 slides en desktop
-                spaceBetween: 30,
+            const swiper = new Swiper('.swiper-container', { 
+                slidesPerView: 1,  // Muestra 1 slide en móvil
+                spaceBetween: 10,
                 loop: true,
                 autoplay: {
                     delay: 3000,
@@ -24,14 +26,14 @@ class SwiperState(rx.State):
                 breakpoints: {
                     640: {
                         slidesPerView: 1,  // 1 slide en móvil
-                        spaceBetween: 20,
+                        spaceBetween: 10,
                     },
                     768: {
-                        slidesPerView: 2,  // 2 slides en tablet
-                        spaceBetween: 30,
+                        slidesPerView: 3,  // 2 slides en tablet
+                        spaceBetween: 20,
                     },
                     1024: {
-                        slidesPerView: 3,  // 2 slides en desktop
+                        slidesPerView: 4,  // 3 slides en desktop
                         spaceBetween: 30,
                     },
                 },

@@ -6,7 +6,7 @@ from Creyente.components.imagen_muestra_index import imagen_muestra_index
 from Creyente.routes import Route
 from Creyente.components.link_button import link_button
 from Creyente.components.title import title
-from Creyente.components.swiper import swiper_component
+from Creyente.swiper.swipe_component import swiper_component
 from Creyente.swiper.swiper_state import SwiperState
 from Creyente.style.style import Color, Spacing
 
