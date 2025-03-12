@@ -8,7 +8,7 @@ from Creyente.components.footer import footer
 from Creyente.swiper.carousel_container import carousel_container
 from Creyente.swiper.swipe_component import swiper_component
 from Creyente.swiper.swiper_state import SwiperState
-from Creyente.swiper.carousel_state import CarouselState1
+# from Creyente.swiper.carousel_state import CarouselState1
 from Creyente.style.style import Size
 
 
@@ -23,12 +23,20 @@ from Creyente.style.style import Size
 
 def prueba() -> rx.Component:
     return rx.box(
+        rx.script(
+            src="https://unpkg.com/swiper/swiper-bundle.min.css",
+            type="text/css"
+        ),
+        rx.script(
+            src="https://unpkg.com/swiper/swiper-bundle.min.js",
+            on_ready=SwiperState.init_swiper,  # Asegúrate de definir SwiperState si es necesario
+        ),
         utils.lang(),
         navbar(),
         rx.center(
             rx.vstack(
                 rx.vstack(
-                    rx.heading("Carrusel de Imágenes",color="silver"),
+                    rx.heading("Carrusel de Imágenes"),
                     carousel_container(),
                     rx.text("GALERÍA"),
                         rx.grid(
@@ -41,7 +49,7 @@ def prueba() -> rx.Component:
                     spacing="4",
                     padding="4",
                 ),
-                max_width="600px",
+                max_width="100%",
                 width="100%",
                 margin_y=Size.BIG.value,
                 padding=Size.BIG.value
