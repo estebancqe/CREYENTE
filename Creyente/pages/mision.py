@@ -37,11 +37,11 @@ class SwiperState(rx.State):
                         spaceBetween: 20,
                     },
                     768: {
-                        slidesPerView: 2,  // 2 slides en tablet
+                        slidesPerView: 3,  // 2 slides en tablet
                         spaceBetween: 30,
                     },
                     1024: {
-                        slidesPerView: 2,  // 2 slides en desktop
+                        slidesPerView: 3,  // 2 slides en desktop
                         spaceBetween: 30,
                     },
                 },
@@ -67,7 +67,7 @@ class SwiperState(rx.State):
         )
 
 # Página de Misión
-@rx.page(
+@rx.page( 
     route=Route.MISION.value,
     title=utils.courses_title,
     description=utils.courses_description,
