@@ -2,7 +2,7 @@ import reflex as rx
 
 class SwiperState(rx.State):
     @rx.event
-    def init_swiper(self):
+    def init_swiper(self): 
         return rx.call_script(
             """
             const swiper = new Swiper('.swiper-container', {
