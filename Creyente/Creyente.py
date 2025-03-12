@@ -1,5 +1,5 @@
 import reflex as rx
-import Creyente.constants as const
+import Creyente.constants as const 
 import Creyente.style.style as styles
 from Creyente.pages.index import index
 from Creyente.pages.melamina import melamina
@@ -20,12 +20,12 @@ app = rx.App(
             f"""
             window.dataLayer = window.dataLayer || [];
             function gtag(){{dataLayer.push(arguments);}}
-            gtag('js', new Date());
+            gtag('js', new Date()); 
             gtag('config', '{const.G_TAG}');
             """
         ),
     ],
-)
+) 
 
 app.api.add_api_route("/repo", repo)
 app.api.add_api_route("/api_Muebles",api_Muebles)
