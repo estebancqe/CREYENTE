@@ -29,11 +29,11 @@ class SwiperState(rx.State):
                         spaceBetween: 10,
                     },
                     768: {
-                        slidesPerView: 3,  // 2 slides en tablet
+                        slidesPerView: 3,  // 3 slides en tablet
                         spaceBetween: 20,
                     },
                     1024: {
-                        slidesPerView: 4,  // 3 slides en desktop
+                        slidesPerView: 4,  // 4 slides en desktop
                         spaceBetween: 30,
                     },
                 },
