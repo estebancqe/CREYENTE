@@ -1,7 +1,7 @@
 import reflex as rx
 import Creyente.utils as utils
 import Creyente.style.style as styles
-from Creyente.components.navbar import navbar
+from Creyente.components.navbar_proyectos import navbar_proyectos
 from Creyente.components.footer import footer
 from Creyente.components.carrusel_tailwaind import carrusel_tailwind_despliegue
 from Creyente.views.carrusel_imagenes import ejemplo_carrusel
@@ -18,7 +18,7 @@ from Creyente.routes import Route
 
 def proyectos() -> rx.Component:
     return rx.box(
-        navbar(),
+        navbar_proyectos(),
         rx.center(
             rx.vstack(
                 rx.text("Proyectos", size=Spacing.VERY_BIG.value,color="silver"),
