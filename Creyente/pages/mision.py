@@ -7,6 +7,7 @@ from Creyente.views.sponsors import sponsors
 from Creyente.style.style import Size, Spacing
 from Creyente.routes import Route
 import Creyente.utils as utils 
+from Creyente.prueba_componentes.muestra_mueble.mueble_explicacion import mueble_explicacion
 
 # Página de Misión
 @rx.page( 
@@ -24,6 +25,7 @@ def mision() -> rx.Component:
             rx.container(
                 rx.vstack(
                     rx.heading("MISION", size=Spacing.VERY_BIG.value, color="silver"),
+                    mueble_explicacion(),
                     sponsors(),
                     spacing=Spacing.BIG.value,
                     width="100%",
