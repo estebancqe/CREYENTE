@@ -10,6 +10,9 @@ from Creyente.swiper.swipe_component import swiper_component
 from Creyente.components.title import title
 from Creyente.swiper.swiper_state import SwiperState
 from Creyente.style.style import Size 
+from Creyente.prueba_componentes.cond_imagenes import galeria
+from Creyente.prueba_componentes.scrollbar import scrollbar
+from Creyente.prueba_componentes.imagenes_muesetra_index import imagen_grid_muestra
 
 
 @rx.page(
@@ -35,15 +38,18 @@ def prueba() -> rx.Component:
         navbar(),
         rx.center(
             rx.vstack(
+                galeria(),
+                scrollbar(),
+                imagen_grid_muestra(),
                 rx.vstack(
                     rx.heading("Carrusel de Imágenes"),
                     carousel_container(),
                     title("GALERÍA"),
                         rx.grid(
-                            swiper_component(),
+                            swiper_component(), 
                             width="100%",
                             margin_y="4"
-                        ), 
+                        ),
                     align="center",
                     width="100%",
                     spacing="4",

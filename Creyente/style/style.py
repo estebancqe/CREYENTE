@@ -76,6 +76,7 @@ carousel_styles = {
 
 class Size(Enum):
     ZERO = "0px !important"
+    VERY_SMALL = "0.2em" 
     SMALL = "0.5em"
     MEDIUM = "0.8em"
     DEFAULT = "1em"

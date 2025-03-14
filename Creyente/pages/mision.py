@@ -1,7 +1,7 @@
 # mision.py
 import reflex as rx
 from typing import Dict, Any
-from Creyente.components.carrusel_tailwaind import carrusel_tailwind
+from Creyente.components.carrusel_tailwaind import carrusel_tailwind_despliegue
 from Creyente.components.navbar import navbar
 from Creyente.components.footer import footer
 from Creyente.views.sponsors import sponsors
@@ -82,7 +82,7 @@ def mision() -> rx.Component:
             rx.container(
                 rx.vstack(
                     rx.heading("MISION", size=Spacing.VERY_BIG.value, color="silver"),
-                    carrusel_tailwind(),
+                    carrusel_tailwind_despliegue(),
                     sponsors(),
                     spacing=Spacing.BIG.value,
                     width="100%",

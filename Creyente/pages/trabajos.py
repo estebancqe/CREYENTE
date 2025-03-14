@@ -21,7 +21,7 @@ def trabajos() -> rx.Component:
         rx.center(
             rx.vstack(
                 # header(),
-                rx.text("TRABAJOS", size=Spacing.VERY_BIG.value,color="silver"),
+                rx.text("Proyectos", size=Spacing.VERY_BIG.value,color="silver"),
                 ejemplo_carrusel(),
                 max_width=styles.MAX_WIDTH,
                 width="100%",

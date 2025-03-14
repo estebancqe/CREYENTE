@@ -17,14 +17,15 @@ from Creyente.swiper.swiper_state import SwiperState  # Importa el estado Swiper
 )
 def index() -> rx.Component:
     return rx.box(
-        # Scripts de Swiper
+        # Solo un script CSS
         rx.script(
             src="https://unpkg.com/swiper/swiper-bundle.min.css",
             type="text/css"
         ),
+        # Solo un script JS que inicializa ambos swipers
         rx.script(
             src="https://unpkg.com/swiper/swiper-bundle.min.js",
-            on_ready=SwiperState.init_swiper,  # Asegúrate de definir SwiperState si es necesario
+            on_ready=SwiperState.init_swiper,  # Solo usaremos un estado
         ),
         utils.lang(),
         navbar(),
