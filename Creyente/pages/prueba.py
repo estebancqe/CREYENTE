@@ -5,6 +5,7 @@ import Creyente.style.style as styles
 from Creyente.routes import Route
 from Creyente.components.navbar import navbar
 from Creyente.components.footer import footer
+from Creyente.prueba_componentes.ejemplo_links import ejemplo_links
 from Creyente.swiper.carousel_container import carousel_container
 from Creyente.swiper.swipe_component import swiper_component
 from Creyente.components.title import title
@@ -38,11 +39,14 @@ def prueba() -> rx.Component:
         navbar(),
         rx.center(
             rx.vstack(
+                rx.heading("Condicional por pantalla",color="black"),
                 galeria(),
+                rx.heading("Scrollbar con slide de Imágenes",color="black"),
                 scrollbar(),
+                rx.heading("Imágenes con otra configuracion de tamano",color="black"),
                 imagen_grid_muestra(),
                 rx.vstack(
-                    rx.heading("Carrusel de Imágenes"),
+                    rx.heading("Carrusel de Imágenes con container",color="black"),
                     carousel_container(),
                     title("GALERÍA"),
                         rx.grid(
@@ -50,6 +54,7 @@ def prueba() -> rx.Component:
                             width="100%",
                             margin_y="4"
                         ),
+                        ejemplo_links(),
                     align="center",
                     width="100%",
                     spacing="4",

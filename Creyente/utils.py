@@ -50,14 +50,14 @@ melamina_meta.extend(_meta)
 
 
 # Metadatos para la página de trabajos
-trabajo_title = "Trabajos | nuestros diseños"
-trabajo_description = "algunos de los trabajamos que hemos hecho"
+proyectos_title = "Proyectos | nuestros diseños"
+proyectos_description = "algunos de los proyectos que hemos hecho"
 
-trabajo_meta = [
-    {"name": "og:title", "content": trabajo_title},
-    {"name": "og:description", "content": trabajo_description},
+proyectos_meta = [
+    {"name": "og:title", "content": proyectos_title},
+    {"name": "og:description", "content": proyectos_description},
 ]
-trabajo_meta.extend(_meta)
+proyectos_meta.extend(_meta)
 
 
 

@@ -12,5 +12,5 @@ def imagen_muestra_index(image: str, url:str) -> rx.Component:
         is_external=True,
         aling="center",
         justify="center",
-        width="100%",
+        width="100%", 
     )   

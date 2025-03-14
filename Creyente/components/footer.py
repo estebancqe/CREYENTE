@@ -117,7 +117,7 @@ def footer() -> rx.Component:
                                 sm="end"
                             ),
                         ),
-                        href=Route.TRABAJOS.value,
+                        href=Route.PROYECTOS.value,
                         is_external=True,
                     ),
 

@@ -67,7 +67,7 @@ def swiper_component():
                             width="100%",
                             height="100%",
                         ),
-                        href=f"/mision#{image['section_id']}", # Usa la ruta completa
+                        href=f"/proyectos#{image['section_id']}", # Usa la ruta completa
                         is_external=False
                     ),
                     class_name="swiper-slide"

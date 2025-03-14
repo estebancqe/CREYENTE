@@ -6,7 +6,7 @@ def carousel_container():
         rx.image(
             src=CarouselState1.images[CarouselState1.current_image],
             width="auto",
-            height="600px",
+            height=["250px","600px"],
         ),
         rx.hstack(
             rx.button(

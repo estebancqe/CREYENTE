@@ -1,13 +1,13 @@
 import reflex as rx
 from Creyente.style.style import Color, Spacing
 from Creyente.components.title import title
-from Creyente.components.imagen_muestra_index import imagen_muestra_index
+from Creyente.components.imagen_simple_index import imagen_muestra_index
 
 
 
 def galeria() -> rx.Component:
     return rx.vstack(
-        title("GALERÍA"),
+        title("condicional por pantalla "),
         rx.vstack(
             rx.desktop_only(
                 rx.flex(

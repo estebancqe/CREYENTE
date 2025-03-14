@@ -78,7 +78,7 @@ class Size(Enum):
     ZERO = "0px !important"
     VERY_SMALL = "0.2em" 
     SMALL = "0.5em"
-    MEDIUM = "0.8em"
+    MEDIUM = "0.90em"
     DEFAULT = "1em"
     MEDIUM_LARGE= "1.2em" #uso para la pabra de navbar
     LARGE = "1.5em"
@@ -137,7 +137,7 @@ BASE_STYLE = {
 navbar_title_style = dict(
     font_family=Font.LOGO.value,
     font_weight=FontWeight.MEDIUM.value,
-    font_size=[Size.DEFAULT.value,Size.MEDIUM_LARGE.value],
+    font_size=[Size.MEDIUM.value,Size.MEDIUM_LARGE.value],
 )
 
 title_style = dict(

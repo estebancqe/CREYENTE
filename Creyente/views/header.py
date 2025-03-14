@@ -12,11 +12,6 @@ from Creyente.state.PageState import PageState
 def header(details=True) -> rx.Component:
     return rx.vstack(
         rx.hstack(
-            # rx.image(
-            #     src="/CREYENTE.png",
-            #     width="300px",
-            #     aling="center",
-            # ),
             rx.vstack(
                 rx.heading(
                     "CREYENTE",
@@ -24,7 +19,7 @@ def header(details=True) -> rx.Component:
                     color=Color.CONTENT.value,
                 ),
                 rx.text(
-                    "Diseño de muebles y mas",
+                    "tu estilo de muebles y mas",
                     margin_top=Size.ZERO.value,
                     color=Color.BLACK.value,
                     size=Spacing.BIG.value,

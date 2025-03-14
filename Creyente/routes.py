@@ -7,5 +7,5 @@ class Route(Enum):
     COTIZAR = "/cotizar"
     HISTORIA = "/historia"
     MISION = "/mision"
-    TRABAJOS = "/trabajos"
+    PROYECTOS = "/proyectos"
     PRUEBA = "/prueba"

@@ -6,7 +6,7 @@ from Creyente.pages.melamina import melamina
 from Creyente.pages.cotizar import cotizar
 from Creyente.pages.historia import historia
 from Creyente.pages.mision import mision
-from Creyente.pages.trabajos import trabajos
+from Creyente.pages.proyectos import proyectos
 from Creyente.pages.prueba import prueba
 from Creyente.api.api import repo,api_Muebles,api_Modelos
 

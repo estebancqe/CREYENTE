@@ -1,6 +1,6 @@
 #imagenes_muestra_index
 import reflex as rx
-from Creyente.components.imagen_muestra_index import imagen_muestra_index
+from Creyente.components.imagen_simple_index import imagen_muestra_index
 from Creyente.components.title import title
 from Creyente.style.style import Color, Spacing
 
