@@ -1,16 +1,17 @@
 import reflex as rx
 
-class AppConfig(rx.Config):
-    pass
-
-config = AppConfig(
+config = rx.Config(
     app_name="Creyente",
-    db_url="sqlite:///reflex.db",
-    env=rx.Env.DEV,
+    # Para producción, usa una base de datos PostgreSQL
+    db_url="postgresql://user:password@localhost:5432/creyente_db",  
     api_url="https://creyente.onrender.com",
+    # Asegúrate que los CORS estén correctamente configurados
     cors_allowed_origins=[
         "http://localhost:3000",
         "https://creyente.vercel.app",
-        "https://jcqsoft.com/creyente",
+        "https://jcqsoft.com/creyente"
     ],
+    # Configuración para producción
+    frontend_port=3000,
+    backend_port=8000
 )
