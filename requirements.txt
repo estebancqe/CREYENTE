@@ -2,3 +2,4 @@ pip==25.0.1
 python-dotenv==1.0.1
 supabase==2.12.0
 reflex==0.7.4
+libsass  # Nueva dependencia para SASS/SCSS [(9)](https://github.com/orgs/reflex-dev/discussions/5000)

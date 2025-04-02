@@ -3,14 +3,9 @@ python -m venv .venvcreyente
 source .venvcreyente/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt 
-
-# Export frontend
-reflex export --frontend-only --no-zip [(3)](https://reflex.dev/docs/hosting/self-hosting)
-
-# Si necesitas el archivo zip en lugar de los archivos estáticos:
-# reflex export --frontend-only
-
-# Si necesitas ambos frontend y backend:
-# reflex export
-
+rm -rf public
+reflex init
+API_URL=https://creyente.onrender.com reflex export --frontend-only
+unzip frontend.zip -d public
+rm -f frontend.zip
 deactivate
