@@ -8,7 +8,7 @@ from Creyente.components.link_button import link_button
 from Creyente.components.title import title
 from Creyente.swiper.swipe_component import swiper_component
 from Creyente.swiper.swiper_pedido import swiper_pedido
-from Creyente.swiper.swiper_state import SwiperState
+from Creyente.swiper.swiper_state import SwiperState 
 from Creyente.style.style import Color, Spacing
 
 
@@ -18,7 +18,7 @@ def index_links() -> rx.Component:
 
         title("NUESTROS PRODUCTOS"),
         rx.grid(
-            swiper_component(),
+            swiper_component (), 
             width="100%",
             margin_y="4"
         ),

@@ -1,8 +1,8 @@
 import reflex as rx
 
-def swiper_component():
+def swiper_component(): 
     # Definimos la lista de imágenes con sus propiedades
-    images = [
+    images = [ 
         {
             "src": "/trabajos_web/mueble_sala_horizontal_1080_web.JPG",
             "title": "Mueble Sala",

@@ -1,13 +1,13 @@
-# swiper_state.py
 import reflex as rx
+
 class SwiperState(rx.State):
     @rx.event
-    def init_swiper(self): 
+    def init_swiper(self):
         return [
             rx.call_script("""
                 // Configuración común para ambos swipers
                 const swiperConfig = {
-                    slidesPerView: 1,
+                    slidesPerView: 2, // Cambiado a 2 para móvil
                     spaceBetween: 10,
                     loop: true,
                     autoplay: {
@@ -23,7 +23,7 @@ class SwiperState(rx.State):
                     },
                     breakpoints: {
                         640: {
-                            slidesPerView: 1,
+                            slidesPerView: 2,
                             spaceBetween: 10,
                         },
                         768: {
