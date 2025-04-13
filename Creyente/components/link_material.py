@@ -45,7 +45,7 @@ def link_material(title: str,
             justify="center",#que este en el centro las imagenes
             width="100%"
         ),
-        bg=Color.CONTENT.value,
+        bg=Color.CONTENT_TRANSP.value,
         border=f"{'2px' if highlight_color != None else '0px'} solid {highlight_color}",
         class_name="animate__animated animate__bounce animate__delay-1s",
         

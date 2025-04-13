@@ -23,12 +23,12 @@ def index_links() -> rx.Component:
             margin_y="4"
         ),
 
-        title("POR QUE ELEGIRNOS"),
-        rx.grid(
-            swiper_pedido(),
-            width="100%",
-            margin_y="4"
-        ),
+        # title("POR QUE ELEGIRNOS"),
+        # rx.grid(
+        #     swiper_pedido(),
+        #     width="100%",
+        #     margin_y="4"
+        # ),
 
         title("SOCIAL MEDIA"),
         rx.flex(
@@ -54,7 +54,7 @@ def index_links() -> rx.Component:
 
         rx.flex(
             link_button(
-                "Youtube",
+                "X",
                 """Clases y tutoriales.""",
                 "/icons/youtube.svg",
                 const.YOUTUBE
@@ -72,30 +72,30 @@ def index_links() -> rx.Component:
             justify="between"
         ),
         
-        title("Cátalogo De Materiales"),
-        rx.flex(
-            link_button(
-                "Catalago de Materiales",
-                "Consulta los diferentes colores que puedes elegir",
-                "/icons/book-solid.svg",
-                Route.MELAMINA.value,
-                False,
-                Color.GRIS.value
-            ),
-            link_button(
-                "Cotizacion",
-                "cotizacion tu Productos",
-                "/icons/book-solid.svg",
-                Route.COTIZAR.value,
-                False,
-                Color.GRIS.value
-            ),
-            spacing="2",    
-            width="100%",
-            flex_direction=["column", "column", "row"],
-            align="center",
-            justify="between"
-        ),
+        # title("Cátalogo De Materiales"),
+        # rx.flex(
+        #     link_button(
+        #         "Catalago de Materiales",
+        #         "Consulta los diferentes colores que puedes elegir",
+        #         "/icons/book-solid.svg",
+        #         Route.MELAMINA.value,
+        #         False,
+        #         Color.GRIS.value
+        #     ),
+            # link_button(
+            #     "Cotizacion",
+            #     "cotizacion tu Productos",
+            #     "/icons/book-solid.svg",
+            #     Route.COTIZAR.value,
+            #     False,
+            #     Color.GRIS.value
+            # ),
+        #     spacing="2",    
+        #     width="100%",
+        #     flex_direction=["column", "column", "row"],
+        #     align="center",
+        #     justify="center"
+        # ),
         
         title("Crea lo que Siempre has Soñado"),
 

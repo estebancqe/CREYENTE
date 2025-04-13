@@ -4,30 +4,47 @@ def swiper_component():
     # Definimos la lista de imágenes con sus propiedades
     images = [
         {
-            "src": "/trabajos_web/cafetera_horizontal_1080_web.JPG",  # Ruta de la imagen
-            "title": "Cafetera Horizontal",                           # Título de la imagen
-            "section_id": "cafetera"                                  # ID para navegación
-        },
-        {
-            "src": "/trabajos_web/cogador_horizontal_1080_web.JPG",
-            "title": "Colgador Horizontal",
-            "section_id": "colgador"
-        },
-        {
-            "src": "/trabajos_web/escritorio_cerrado_1080_web.JPG",
-            "title": "Escritorio Cerrado",
-            "section_id": "escritorio"
-        },
-        {
             "src": "/trabajos_web/mueble_sala_horizontal_1080_web.JPG",
             "title": "Mueble Sala",
             "section_id": "mueble-sala"
         },
         {
+            "src": "/trabajos_web/cogador_horizontal_1080_web.JPG",
+            "title": "Perchero",
+            "section_id": "perchero"
+        },
+        {
             "src": "/trabajos_web/estudio_con_homenaje_1080_web.JPG",
             "title": "Estudio con Homenaje",
             "section_id": "estudio"
+        },
+        {
+            "src": "/trabajos_web/escritorio_cerrado_1080_web.JPG",
+            "title": "Escritorio",
+            "section_id": "escritorio"
+        },
+        {
+            "src": "/trabajos_web/cafetera_horizontal_1080_web.JPG",  # Ruta de la imagen
+            "title": "Mueble para café ",                           # Título de la imagen
+            "section_id": "cafetera"                                  # ID para navegación
+        },
+        {
+            "src": "/trabajos_web/mueble_cocina_electrodomesticos_1080_web.JPG",
+            "title": "Mueble Cocina",
+            "section_id": "mueble-cocina",
+        },
+        {
+            "src": "/trabajos_web/mueble_armario_1080_web.JPG",
+            "title": "Mueble Cuarto",
+            "section_id": "mueble-cuarto",
+        },
+        {
+            "src": "/fotostecho/teja.jpg",
+            "title": "Techo con Teja",
+            "section_id": "techo-teja",
         }
+        
+        
     ]
     
     # Retornamos el componente principal

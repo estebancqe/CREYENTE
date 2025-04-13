@@ -205,6 +205,10 @@ def carrusel_tailwind(carousel_id: str, images: list[str], titulo: str):
 # Función para desplegar múltiples carruseles
 def carrusel_tailwind_despliegue():
     # Lista de imágenes para el carrusel de ejemplo
+
+
+
+    # Lista de imágenes para el carrusel de ejemplo
     images0 = [
         "/trabajos_web/cafetera_horizontal_1080_web.JPG",
         "/trabajos_web/cogador_horizontal_1080_web.JPG",
@@ -212,71 +216,103 @@ def carrusel_tailwind_despliegue():
         "/trabajos_web/mueble_sala_horizontal_1080_web.JPG",
         "/trabajos_web/estudio_con_homenaje_1080_web.JPG",
     ]
+
+
     
-    # Lista de imágenes para el carrusel de cafetera
-    images = [
-        "/trabajos_web/cafetera_horizontal_1080_web.JPG",
-        "/trabajos_web/cafetera_vertical_cerrado_1080_web.JPG",
-        "/trabajos_web/cafetera_vertical_abierto_1080_web_.JPG"
+
+    # Lista de imágenes para el carrusel de mueble sala
+    images1 = [
+        "/trabajos_web/mueble_sala_horizontal_1080_web.JPG",
+        "/trabajos_web/mueble_sala_vertical_1080_web.JPG",
     ]
-    
-    # Lista de imágenes para el carrusel de colgador
+
+    # Lista de imágenes para el carrusel de perchero
     images2 = [
         "/trabajos_web/cogador_horizontal_1080_web.JPG",
         "/trabajos_web/colgador_vertical_cerrado_1080_web.JPG",
         "/trabajos_web/colgador_vertical_abierto_1080_web.JPG",
     ]
-    
-    # Lista de imágenes para el carrusel de escritorio
+    # Lista de imágenes para el carrusel de estudio
     images3 = [
+        "/trabajos_web/estudio_con_homenaje_1080_web.JPG",
+    ]
+    # Lista de imágenes para el carrusel de escritorio
+    images4 = [
         "/trabajos_web/escritorio_cerrado_1080_web.JPG",
         "/trabajos_web/escritorio_abierto_1080_web.JPG",
     ]
-    
-    # Lista de imágenes para el carrusel de mueble sala
-    images4 = [
-        "/trabajos_web/mueble_sala_horizontal_1080_web.JPG",
-        "/trabajos_web/mueble_sala_vertical_1080_web.JPG",
-    ]
-    
-    # Lista de imágenes para el carrusel de estudio
+    # Lista de imágenes para el carrusel de cafetera
     images5 = [
+        "/trabajos_web/cafetera_horizontal_1080_web.JPG",
+        "/trabajos_web/cafetera_vertical_cerrado_1080_web.JPG",
+        "/trabajos_web/cafetera_vertical_abierto_1080_web_.JPG"
+    ]
+    # Lista de imágenes para el carrusel de cocina
+    images6 = [
         "/trabajos_web/mueble_cocina_electrodomesticos_1080_web.JPG",
         "/trabajos_web/mueble_cocina_alacena_1080_web.JPG",
         "/trabajos_web/mueble_cocina_horno_alacena_1080_web.JPG",
+    ]
+    # Lista de imágenes para el carrusel de cuarto
+    images7 = [
+        "/trabajos_web/mueble_armario_1080_web.JPG",
+    ]
+    # Lista de imágenes para techo con tejas
+    images8 = [
+        "/fotostecho/inicio_techo.jpg",
+        "/fotostecho/teja.jpg",
+        "/fotostecho/madera_interno_lateral.jpg",
+        "/fotostecho/madera_interno_puerta.jpg",
     ]
     
     # Retorna un stack vertical con todos los carruseles
     return rx.vstack(
         # Carrusel de ejemplo
-        rx.box(
-            carrusel_tailwind("carrusel1", images0, "EJEMPLO"),
-            id="ejemplo"
-        ),
-        # Carrusel de cafetera
-        rx.box(
-            carrusel_tailwind("carrusel2", images, "Cafetera"),
-            id="cafetera"
-        ),
-        # Carrusel de colgador
-        rx.box(
-            carrusel_tailwind("carrusel3", images2, "Colgador"),
-            id="colgador"
-        ),
-        # Carrusel de escritorio
-        rx.box(
-            carrusel_tailwind("carrusel4", images3, "Escritorio"),
-            id="escritorio"
-        ),
+        # rx.box(
+        #     carrusel_tailwind("carrusel1", images1, "EJEMPLO"),
+        #     id="ejemplo"
+        # ),
+
+
         # Carrusel de mueble sala
         rx.box(
-            carrusel_tailwind("carrusel5", images4, "Mueble Sala"),
+            carrusel_tailwind("carrusel5", images1, "Mueble Sala"),
             id="mueble-sala"
+        ),
+        # Carrusel de Perchero
+        rx.box(
+            carrusel_tailwind("carrusel3", images2, "Perchero"),
+            id="perchero"
         ),
         # Carrusel de estudio
         rx.box(
-            carrusel_tailwind("carrusel6", images5, "Estudio"),
+            carrusel_tailwind("carrusel6", images3, "Estudio con Homenaje"),
             id="estudio"
+        ),
+        # Carrusel de escritorio
+        rx.box(
+            carrusel_tailwind("carrusel4", images4, "Escritorio"),
+            id="escritorio"
+        ),
+        # Carrusel de cafetera
+        rx.box(
+            carrusel_tailwind("carrusel2", images5, "El Rincon del cafe"),
+            id="cafetera"
+        ),
+        # Carrusel de Mueble Cocina
+        rx.box(
+            carrusel_tailwind("carrusel7", images6, "Mueble Cocina"),
+            id="mueble-cocina"
+        ),
+        # Carrusel de Mueble Cuarto
+        rx.box(
+            carrusel_tailwind("carrusel7", images7, "Mueble Cuarto"),
+            id="mueble-cuarto"
+        ),
+        # Carrusel de techo con tejas
+        rx.box(
+            carrusel_tailwind("carrusel8", images8, "Techo con Tejas"),
+            id="techo_tejas"
         ),
         width="100%",
         spacing="8",

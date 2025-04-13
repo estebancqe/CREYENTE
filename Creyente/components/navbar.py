@@ -27,26 +27,32 @@ def navbar() -> rx.Component:
                     Route.HISTORIA.value,
                     "palabra historia"
                 ),
+                
                 spacing="2",  # Espaciado entre elementos
             ),
             # Segundo grupo de enlaces
             rx.hstack(
                 # Enlaces de Misión, Proyectos y Prueba
-                link_navbar(
-                    "Misión",
-                    Route.MISION.value,
-                    "palabra mision",
-                ),
+                # link_navbar(
+                #     "Misión",
+                #     Route.MISION.value,
+                #     "palabra mision",
+                # ),
                 link_navbar(
                     "Proyectos",
                     Route.PROYECTOS.value,
                     "palabra trabajos",
                 ),
                 link_navbar(
-                    "Prueba",
-                    Route.PRUEBA.value,
-                    "palabra inicio",
+                    "Materiales",
+                    Route.MELAMINA.value,
+                    "tipos de materiales en melamina"
                 ),
+                # link_navbar(
+                #     "Prueba",
+                #     Route.PRUEBA.value,
+                #     "palabra inicio",
+                # ),
                 spacing="2",  # Espaciado entre elementos
             ),
             # Estilos para el contenedor de navegación

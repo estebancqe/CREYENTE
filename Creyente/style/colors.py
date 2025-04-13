@@ -6,6 +6,7 @@ class Color(Enum):
     SECONDARY = "#A3B18A" #verde oliva
     BACKGROUND = "#F5F5F5" #blanco hueso
     CONTENT = "#D2B48C" # cafe claro
+    CONTENT_TRANSP="#D2B48C1A" # cafe claro con 80% de transparencia
     SECOND_TITTLE= "#CCB089" # cafe claro ocn mas contraste tendecia mas oscura
     BLACK="#0C151D"
     GRIS = "#C2C2C2" #gris antrasita
