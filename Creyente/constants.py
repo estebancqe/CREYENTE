@@ -17,10 +17,10 @@ LOGO_CREYENTE=""
 
 #contactos
 INSTAGRAM="https://www.instagram.com/creyente_madera?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-FACEBOOK="https://www.facebook.com/cesaresteban.quinaegas?mibextid=ZbWKwL"
+FACEBOOK="https://www.facebook.com/profile.php?id=61572800736992"
 YOUTUBE="https://www.youtube.com/channel/UC6bOSo15WMcbCdwvDuf5p7A"
-LINKEDLINK="https://www.linkedin.com/in/cesar-esteban-qui%C3%B1a-30675a239/"
-
+LINKEDLINK="https://www.linkedin.com/in/creyente-maderas-b85250360/"
+X="https://x.com/CreyenteMadera"
 # ubicacion
 UBI_IBARRA="https://maps.app.goo.gl/CieZ27tyF9YH337P8"
 UBI_LATA="https://maps.app.goo.gl/aSzo9QEtB4QwC12P9"
@@ -29,6 +29,7 @@ MADERA_PERSONALIZADA="https://creyentemadera.my.canva.site/creyentemadera"
 TABLA_PICAR="https://creyentemadera.my.canva.site/creyentemadera"
 MUEBLES_PERSONLAZADOS="https://creyentemadera.my.canva.site/creyentemadera"
 AMOBLADO_AREA="https://creyentemadera.my.canva.site/creyentemadera"
+
 
 
 #otra pagina

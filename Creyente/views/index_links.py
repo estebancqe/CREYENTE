@@ -55,13 +55,13 @@ def index_links() -> rx.Component:
         rx.flex(
             link_button(
                 "X",
-                """Clases y tutoriales.""",
-                "/icons/youtube.svg",
-                const.YOUTUBE
+                """Se parte de nuestro ultimos modelos.""",
+                "/icons/x.png",
+                const.X
             ),
             link_button(
-                "Tik-Tok",
-                """Videos cortos y divertidos.""",
+                "LinkedIn",
+                """Nuestros Diseños.""",
                 "/icons/linkedin.svg",
                 const.LINKEDLINK 
             ),

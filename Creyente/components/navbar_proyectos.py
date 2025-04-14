@@ -20,7 +20,7 @@ def navbar_proyectos() -> rx.Component:
                     link_navbar("Perchero", "#perchero", "Perchero"),
                     link_navbar("Estudio con Homenaje", "#estudio", "Estudio"),
                     link_navbar("Escritorio", "#escritorio", "Escritorio"), 
-                    link_navbar("El Rincon del cafe", "#cafetera", "EL Rincon del cafe"),
+                    link_navbar("El Rincón del café", "#cafetera", "EL Rincon del cafe"),
                     link_navbar("Mueble Cocina", "#mueble-cocina", "Mueble Cocina"),
                     link_navbar("Mueble Cuarto", "#mueble-cuarto", "Mueble Cuarto"),
                     link_navbar("Techo con teja"," #techo_tejas", "Techo con teja"),
