@@ -1,4 +1,3 @@
-
 styles = {
     "breakpoints": {
         "xs": "30em",
@@ -19,9 +18,9 @@ def historia_link() -> rx.Component:
         rx.vstack(
             rx.hstack(
                 rx.image(
-                    "/militar_de_fe.jpeg",
+                    "/renovacion_tia/armario_casa_lata_frontal.jpg",
                     width=rx.breakpoints(
-                        initial="100%",
+                        initial="100%", 
                         sm="300px", 
                         md="400px"
                     ),
@@ -31,9 +30,12 @@ def historia_link() -> rx.Component:
                         md="400px"
                     ),
                     object_fit="cover",
+                    border_radius="10px"
                 ),
                 rx.text(
-                    "'Creyente' no fue solo un alias militar, sino el reflejo de un hombre con fe inquebrantable. Mi padre, un hombre de principios sólidos, encontró en su vocación no solo disciplina, sino la pasión por crear, enseñar y construir un futuro para su familia.",
+                    "CREYENTE nació por necesidad. Después de malas experiencias con carpinteros, decidimos tomar las herramientas en nuestras propias manos. "
+                    "Todo comenzó con un simple mueble para computadora, hecho con dedicación y cuidado. Lo que empezó como una solución a un problema personal "
+                    "se convirtió en el inicio de algo mucho mayor.",
                     font_size=rx.breakpoints(
                         initial="14px",
                         sm="16px",
@@ -43,6 +45,7 @@ def historia_link() -> rx.Component:
                         initial="1em",
                         md="2em"
                     ),
+                    text_align="justify"
                 ),
                 spacing="4",
                 align="center",
@@ -54,7 +57,9 @@ def historia_link() -> rx.Component:
             ),
             rx.hstack(
                 rx.text(
-                    "De su dedicación nació algo más que un simple oficio: una pasión por transformar materiales en piezas únicas. Nos enseñó que cada detalle cuenta, que la excelencia no es una opción, sino la única forma de trabajar.",
+                    "Con cada proyecto, nuestra habilidad crecía. Pronto estábamos trabajando con melamina, construyendo los armarios de nuestra propia casa. "
+                    "Familiares y amigos, al ver nuestro trabajo, comenzaron a pedirnos remodelaciones: mesas que renovar, muebles antiguos que restaurar. "
+                    "Cada trabajo era un nuevo reto que aceptábamos con entusiasmo, perfeccionando nuestras técnicas.",
                     font_size=rx.breakpoints(
                         initial="14px",
                         sm="16px",
@@ -64,9 +69,10 @@ def historia_link() -> rx.Component:
                         initial="1em",
                         md="2em"
                     ),
+                    text_align="justify"
                 ),
                 rx.image(
-                    "/artezano.jpg",
+                    "/renovacion_tia/comedor_tia_solo.jpg",
                     width=rx.breakpoints(
                         initial="100%",
                         sm="300px",
@@ -78,30 +84,19 @@ def historia_link() -> rx.Component:
                         md="400px"
                     ),
                     object_fit="cover",
+                    border_radius="10px"
                 ),
                 spacing="4",
                 align="center",
                 flex_direction=rx.breakpoints(
-                    initial="column",
+                    initial="column-reverse",
                     md="row"
                 ),
                 width="100%",
             ),
             rx.hstack(
-                rx.text(
-                    "Hoy, este negocio no es solo una empresa, es un legado. Como familia, seguimos el ejemplo de mi padre, combinando tradición con innovación, creando muebles que cuentan historias y acompañan hogares.",
-                    font_size=rx.breakpoints(
-                        initial="14px",
-                        sm="16px",
-                        md="18px"
-                    ),
-                    padding=rx.breakpoints(
-                        initial="1em",
-                        md="2em"
-                    ),
-                ),
                 rx.image(
-                    "/artezanos_familia.jpg",
+                    "/fotostecho/madera_interno_lateral.jpg",
                     width=rx.breakpoints(
                         initial="100%",
                         sm="300px",
@@ -113,18 +108,39 @@ def historia_link() -> rx.Component:
                         md="400px"
                     ),
                     object_fit="cover",
+                    border_radius="10px"
                 ),
-                rx.text(
-                    "Para nosotros, cada cliente es parte de nuestra historia. No solo vendemos muebles, creamos espacios llenos de calidez y personalidad, con la misma dedicación con la que mi padre nos enseñó a trabajar.",
-                    font_size=rx.breakpoints(
-                        initial="14px",
-                        sm="16px",
-                        md="18px"
+                rx.vstack(
+                    rx.text(
+                        "Lo que comenzó como una necesidad se transformó en pasión. Con cada proyecto, nos desafiamos a superarnos: diseños más complejos, "
+                        "materiales de mejor calidad, acabados impecables. La reputación de CREYENTE creció orgánicamente, basada en el boca a boca de "
+                        "clientes satisfechos que valoraban nuestra atención al detalle y compromiso con la excelencia.",
+                        font_size=rx.breakpoints(
+                            initial="14px",
+                            sm="16px",
+                            md="18px"
+                        ),
+                        padding=rx.breakpoints(
+                            initial="1em",
+                            md="2em"
+                        ),
+                        text_align="justify"
                     ),
-                    padding=rx.breakpoints(
-                        initial="1em",
-                        md="2em"
+                    rx.text(
+                        "Hoy, CREYENTE representa más que muebles. Es la materialización de una filosofía: si algo vale la pena hacerse, vale la pena hacerse bien. "
+                        "Cada pieza que creamos lleva no solo nuestra marca, sino nuestra historia de perseverancia y crecimiento.",
+                        font_size=rx.breakpoints(
+                            initial="14px",
+                            sm="16px",
+                            md="18px"
+                        ),
+                        padding=rx.breakpoints( 
+                            initial="1em",
+                            md="2em"
+                        ),
+                        text_align="justify"
                     ),
+                    align_items="start"
                 ),
                 spacing="4",
                 align="center",
@@ -146,4 +162,5 @@ def historia_link() -> rx.Component:
         width="100%",
         margin="0 auto",
         padding_y="2em",
+        bg=Color.BACKGROUND.value
     )
